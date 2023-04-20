@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listinitial1RowModel" type="com.blogspot.thengnet.modules.dashboardone.data.model.Listinitial1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHorizontalcard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylegray_1">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearMonogram"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_20pxv"
+            android:layout_weight="0.13" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStyleteal_200cornerRadius">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtInitial"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_4pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{listinitial1RowModel.txtInitial}"
+                style="@style/txtRobotomedium16" tools:text="@string/lbl_csc100"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnheader"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="0.61" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHeaderFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{listinitial1RowModel.txtHeaderFour}"
+                style="@style/txtRobotomedium16_1" tools:text="@string/msg_computer_progra2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSubheadFour"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{listinitial1RowModel.txtSubheadFour}"
+                style="@style/txtRobotoregular14" tools:text="@string/msg_vitae_nec_leo_c"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageMediaFour"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_width="@dimen/_80pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_media_80x80}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_media_80x80"/>
+    </LinearLayout>
+</layout>

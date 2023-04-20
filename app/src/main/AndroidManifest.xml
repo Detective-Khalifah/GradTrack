@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.blogspot.thengnet" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.blogspot.thengnet.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.blogspot.thengnet.modules.courseszero.ui.CoursesZeroActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.blogspot.thengnet.modules.splashscreenzero.ui.SplashScreenZeroActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.blogspot.thengnet.modules.splashscreentwo.ui.SplashScreenTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenzero.ui.SignUpScreenZeroActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.forgotpasswordthree.ui.ForgotPasswordThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenone.ui.SignUpScreenOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenfive.ui.SignUpScreenFiveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenseven.ui.SignUpScreenSevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.enrollmentscreenzero.ui.EnrollmentScreenZeroActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.forgotpasswordone.ui.ForgotPasswordOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.profileone.ui.ProfileOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.courses0n.ui.Courses0nActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.splashscreenone.ui.SplashScreenOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.dashboardone.ui.DashboardOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreentwo.ui.SignUpScreenTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenthree.ui.SignUpScreenThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.forgotpasswordtwo.ui.ForgotPasswordTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.dashboardzero.ui.DashboardZeroActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.enrollmentscreenone.ui.EnrollmentScreenOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.profilezero.ui.ProfileZeroActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signinscreenzero.ui.SignInScreenZeroActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.signupscreenfour.ui.SignUpScreenFourActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.blogspot.thengnet.modules.forgotpasswordzero.ui.ForgotPasswordZeroActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

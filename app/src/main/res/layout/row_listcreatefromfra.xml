@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcreatefromfraRowModel" type="com.blogspot.thengnet.modules.signupscreenfour.data.model.ListcreatefromfraRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumncreatefromfra"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+        <FrameLayout android:id="@+id/frameStackcreatefromfra"
+            android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_261pxh">
+            <View
+                android:background="@drawable/rectangle_border_gray_700_radius_4"
+                android:id="@+id/viewCreatefromfra"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_291pxh"/>
+            <ImageView android:id="@+id/imageClose"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_marginBottom="@dimen/_18pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+            <LinearLayout android:id="@+id/linearContent"
+                android:layout_gravity="top|start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabeltextOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:paddingEnd="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{listcreatefromfraRowModel.txtLabeltextOne}"
+                    style="@style/txtSolid" tools:text="@string/lbl_e_mail"/>
+                <View android:background="@color/gray_700"
+                    android:id="@+id/lineCaret"
+                    android:layout_height="@dimen/_16pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_1pxh"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtSupportingtextOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{listcreatefromfraRowModel.txtSupportingtextOne}"
+            style="@style/txtRobotoregular12" tools:text="@string/lbl_supporting_text"/>
+    </LinearLayout>
+</layout>
