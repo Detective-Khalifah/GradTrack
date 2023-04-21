@@ -9,12 +9,9 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenThreeBinding
 import com.blogspot.thengnet.modules.signupscreenfour.ui.SignUpScreenFourActivity
-import com.blogspot.thengnet.modules.signupscreenthree.`data`.model.Listlabeltext3RowModel
-import com.blogspot.thengnet.modules.signupscreenthree.`data`.viewmodel.SignUpScreenThreeVM
+import com.blogspot.thengnet.modules.signupscreenthree.data.model.Listlabeltext3RowModel
+import com.blogspot.thengnet.modules.signupscreenthree.data.viewmodel.SignUpScreenThreeVM
 import com.blogspot.thengnet.modules.signupscreentwo.ui.SignUpScreenTwoActivity
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
 
 class SignUpScreenThreeActivity :
     BaseActivity<ActivitySignUpScreenThreeBinding>(R.layout.activity_sign_up_screen_three) {
@@ -43,7 +40,7 @@ class SignUpScreenThreeActivity :
       val destIntent = SignUpScreenTwoActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearPrevNextButto.setOnClickListener {
+    binding.linearPrevNextButton.setOnClickListener {
       val destIntent = SignUpScreenFourActivity.getIntent(this, null)
       startActivity(destIntent)
     }

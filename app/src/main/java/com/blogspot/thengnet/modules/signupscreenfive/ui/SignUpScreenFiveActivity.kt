@@ -8,13 +8,10 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenFiveBinding
-import com.blogspot.thengnet.modules.signupscreenfive.`data`.model.Listcreatefromfra1RowModel
-import com.blogspot.thengnet.modules.signupscreenfive.`data`.viewmodel.SignUpScreenFiveVM
+import com.blogspot.thengnet.modules.signupscreenfive.data.model.Listcreatefromfra1RowModel
+import com.blogspot.thengnet.modules.signupscreenfive.data.viewmodel.SignUpScreenFiveVM
 import com.blogspot.thengnet.modules.signupscreenfour.ui.SignUpScreenFourActivity
 import com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
 
 class SignUpScreenFiveActivity :
     BaseActivity<ActivitySignUpScreenFiveBinding>(R.layout.activity_sign_up_screen_five) {
@@ -46,7 +43,7 @@ class SignUpScreenFiveActivity :
     binding.imageArrowleft.setOnClickListener {
       finish()
     }
-    binding.linearPrevNextButto.setOnClickListener {
+    binding.linearPrevNextButton.setOnClickListener {
       val destIntent = SignUpScreenSixActivity.getIntent(this, null)
       startActivity(destIntent)
     }

@@ -9,12 +9,9 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenFourBinding
 import com.blogspot.thengnet.modules.signupscreenfive.ui.SignUpScreenFiveActivity
-import com.blogspot.thengnet.modules.signupscreenfour.`data`.model.ListcreatefromfraRowModel
-import com.blogspot.thengnet.modules.signupscreenfour.`data`.viewmodel.SignUpScreenFourVM
+import com.blogspot.thengnet.modules.signupscreenfour.data.model.ListcreatefromfraRowModel
+import com.blogspot.thengnet.modules.signupscreenfour.data.viewmodel.SignUpScreenFourVM
 import com.blogspot.thengnet.modules.signupscreenthree.ui.SignUpScreenThreeActivity
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
 
 class SignUpScreenFourActivity :
     BaseActivity<ActivitySignUpScreenFourBinding>(R.layout.activity_sign_up_screen_four) {
@@ -39,7 +36,7 @@ class SignUpScreenFourActivity :
   }
 
   override fun setUpClicks(): Unit {
-    binding.linearPrevNextButto.setOnClickListener {
+    binding.linearPrevNextButton.setOnClickListener {
       val destIntent = SignUpScreenFiveActivity.getIntent(this, null)
       startActivity(destIntent)
     }

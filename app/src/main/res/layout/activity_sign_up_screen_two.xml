@@ -22,7 +22,7 @@
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 itemSpace="@{@dimen/_20pxh}" tools:itemCount="4" tools:listitem="@layout/row_listlabeltext2"/>
-            <LinearLayout android:id="@+id/linearPrevNextButto"
+            <LinearLayout android:id="@+id/linearPrevNextButton"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_3pxh"
                 android:layout_marginStart="@dimen/_2pxh"

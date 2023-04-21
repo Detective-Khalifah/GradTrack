@@ -1,103 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
-        <variable name="onboardingScreenTwoVM" type="com.blogspot.thengnet.modules.onboardingscreentwo.data.viewmodel.OnboardingScreenTwoVM"/>
+
+        <variable
+            name="onboardingScreenTwoVM"
+            type="com.blogspot.thengnet.modules.onboardingscreentwo.data.viewmodel.OnboardingScreenTwoVM" />
     </data>
-    <LinearLayout android:gravity="center_horizontal"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearOnboardingScreenTwo"
-        android:layout_height="match_parent"
+        style="@style/groupStylewhite_A700"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStylewhite_A700">
-        <ImageView android:gravity="start"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <ImageView
             android:id="@+id/imageImageprocessin"
-            android:layout_height="@dimen/_271pxv"
-            android:layout_marginTop="@dimen/_159pxv"
-            android:layout_width="match_parent"
-            android:scaleType="fitXY"
             imageRes="@{@drawable/img_imageprocessin_1}"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_imageprocessin_1"/>
-        <LinearLayout android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_271pxv"
+            android:gravity="start"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_imageprocessin_1" />
+
+        <LinearLayout
             android:id="@+id/linearOnboardingProg"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_43pxh"
             android:layout_marginStart="@dimen/_43pxh"
             android:layout_marginTop="@dimen/_33pxv"
-            android:layout_width="wrap_content" android:orientation="horizontal">
+            android:layout_marginEnd="@dimen/_43pxh"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageImageprocessin">
+
             <View
-                android:background="@drawable/rectangle_bg_gray_901_radius_6"
                 android:id="@+id/viewIcon"
+                android:layout_width="@dimen/_12pxh"
                 android:layout_height="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_10pxv"
                 android:layout_marginBottom="@dimen/_10pxv"
-                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
+                android:background="@drawable/rectangle_bg_gray_901_radius_6" />
+
             <View
-                android:background="@drawable/rectangle_bg_gray_901_radius_6"
                 android:id="@+id/viewIconOne"
+                android:layout_width="@dimen/_12pxh"
                 android:layout_height="@dimen/_12pxh"
-                android:layout_marginBottom="@dimen/_10pxv"
                 android:layout_marginStart="@dimen/_12pxh"
-                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
-            <LinearLayout android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:background="@drawable/rectangle_bg_gray_901_radius_6" />
+
+            <LinearLayout
                 android:id="@+id/linearSegment"
+                style="@style/groupStylegreen_100cornerRadius"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_6pxh"
-                android:layout_weight="0.7" android:layout_width="0dp"
-                android:orientation="vertical" style="@style/groupStylegreen_100cornerRadius">
+                android:layout_weight="0.7"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
                 <View
-                    android:background="@drawable/rectangle_bg_teal_200_radius_6"
                     android:id="@+id/viewIconTwo"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_width="@dimen/_12pxh"
                     android:layout_height="@dimen/_12pxh"
-                    android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginEnd="@dimen/_22pxh"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="@dimen/_22pxh"
-                    android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_marginEnd="@dimen/_22pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:background="@drawable/rectangle_bg_teal_200_radius_6" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:id="@+id/linearPrevNextButto"
+
+        <LinearLayout
+            android:id="@+id/linearPrevNextButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_43pxh"
             android:layout_marginStart="@dimen/_43pxh"
             android:layout_marginTop="@dimen/_81pxv"
-            android:layout_width="match_parent" android:orientation="horizontal">
+            android:layout_marginEnd="@dimen/_43pxh"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg">
+
             <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnPrevious"
-                android:layout_height="@dimen/_40pxv"
+                style="@style/btnSolidRounded"
                 android:layout_width="@dimen/_104pxh"
+                android:layout_height="@dimen/_40pxv"
+                android:layout_marginBottom="@dimen/_8pxh"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:letterSpacing="0.01"
                 android:lineSpacingExtra="@dimen/_3pxh"
-                android:paddingBottom="@dimen/_11pxv"
-                android:paddingEnd="@dimen/_24pxh"
-                android:paddingStart="@dimen/_24pxh"
-                android:paddingTop="@dimen/_11pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_previous"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_previous"/>
+                tools:text="@string/lbl_previous" />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnEnroll"
+                style="@style/btnSolidRounded"
+                android:layout_width="@dimen/_85pxh"
                 android:layout_height="@dimen/_40pxv"
                 android:layout_marginStart="@dimen/_85pxh"
-                android:layout_width="@dimen/_85pxh"
+                android:layout_marginBottom="@dimen/_8pxh"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:letterSpacing="0.01"
                 android:lineSpacingExtra="@dimen/_3pxh"
-                android:paddingBottom="@dimen/_11pxv"
-                android:paddingEnd="@dimen/_24pxh"
-                android:paddingStart="@dimen/_24pxh"
-                android:paddingTop="@dimen/_11pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_enroll"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_enroll"/>
+                tools:text="@string/lbl_enroll" />
         </LinearLayout>
-        <View android:background="@drawable/rectangle_bg_gray_900"
-            android:id="@+id/lineHome"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="@dimen/_1pxv"
-            android:layout_marginBottom="@dimen/_9pxv"
-            android:layout_marginEnd="@dimen/_43pxh"
-            android:layout_marginStart="@dimen/_43pxh"
-            android:layout_marginTop="@dimen/_127pxv" android:layout_width="@dimen/_62pxh"/>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

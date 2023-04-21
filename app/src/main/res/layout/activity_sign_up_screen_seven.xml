@@ -162,7 +162,7 @@
                 android:text="@{signUpScreenSevenVM.signUpScreenSevenModel.txtDidntreceive}"
                 style="@style/txtRobotoromanregular14" tools:text="@string/msg_didn_t_receive"/>
             <LinearLayout android:gravity="end"
-                android:id="@+id/linearPrevNextButto"
+                android:id="@+id/linearPrevNextButton"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10pxh"
                 android:layout_marginTop="@dimen/_146pxv"

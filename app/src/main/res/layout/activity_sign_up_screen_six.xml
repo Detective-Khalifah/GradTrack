@@ -72,7 +72,7 @@
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 itemSpace="@{@dimen/_9pxh}" tools:itemCount="2" tools:listitem="@layout/row_listcreatefromfra2"/>
-            <LinearLayout android:id="@+id/linearPrevNextButto"
+            <LinearLayout android:id="@+id/linearPrevNextButton"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_49pxv"
                 android:layout_width="match_parent" android:orientation="horizontal">

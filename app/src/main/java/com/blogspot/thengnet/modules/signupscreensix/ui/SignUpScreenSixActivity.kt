@@ -10,11 +10,8 @@ import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenSixBinding
 import com.blogspot.thengnet.modules.signupscreenfive.ui.SignUpScreenFiveActivity
 import com.blogspot.thengnet.modules.signupscreenseven.ui.SignUpScreenSevenActivity
-import com.blogspot.thengnet.modules.signupscreensix.`data`.model.Listcreatefromfra2RowModel
-import com.blogspot.thengnet.modules.signupscreensix.`data`.viewmodel.SignUpScreenSixVM
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
+import com.blogspot.thengnet.modules.signupscreensix.data.model.Listcreatefromfra2RowModel
+import com.blogspot.thengnet.modules.signupscreensix.data.viewmodel.SignUpScreenSixVM
 
 class SignUpScreenSixActivity :
     BaseActivity<ActivitySignUpScreenSixBinding>(R.layout.activity_sign_up_screen_six) {
@@ -50,7 +47,7 @@ class SignUpScreenSixActivity :
     binding.imageArrowleft.setOnClickListener {
       finish()
     }
-    binding.linearPrevNextButto.setOnClickListener {
+    binding.linearPrevNextButton.setOnClickListener {
       val destIntent = SignUpScreenSevenActivity.getIntent(this, null)
       startActivity(destIntent)
     }

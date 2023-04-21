@@ -235,7 +235,7 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     itemSpace="@{@dimen/_20pxh}" tools:itemCount="3" tools:listitem="@layout/row_listlabeltext1"/>
             </LinearLayout>
-            <LinearLayout android:id="@+id/linearPrevNextButto"
+            <LinearLayout android:id="@+id/linearPrevNextButton"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_3pxh"
                 android:layout_marginStart="@dimen/_2pxh"

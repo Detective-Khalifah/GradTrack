@@ -8,10 +8,8 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenSevenBinding
 import com.blogspot.thengnet.modules.dashboardzero.ui.DashboardZeroActivity
-import com.blogspot.thengnet.modules.signupscreenseven.`data`.viewmodel.SignUpScreenSevenVM
+import com.blogspot.thengnet.modules.signupscreenseven.data.viewmodel.SignUpScreenSevenVM
 import com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity
-import kotlin.String
-import kotlin.Unit
 
 class SignUpScreenSevenActivity :
     BaseActivity<ActivitySignUpScreenSevenBinding>(R.layout.activity_sign_up_screen_seven) {
@@ -30,7 +28,7 @@ class SignUpScreenSevenActivity :
     binding.imageArrowleft.setOnClickListener {
       finish()
     }
-    binding.linearPrevNextButto.setOnClickListener {
+    binding.linearPrevNextButton.setOnClickListener {
       val destIntent = DashboardZeroActivity.getIntent(this, null)
       startActivity(destIntent)
     }
