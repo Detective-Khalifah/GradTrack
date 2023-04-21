@@ -8,11 +8,9 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenZeroBinding
-import com.blogspot.thengnet.modules.signupscreenzero.`data`.model.ListlabeltextRowModel
-import com.blogspot.thengnet.modules.signupscreenzero.`data`.viewmodel.SignUpScreenZeroVM
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
+import com.blogspot.thengnet.modules.signupscreenone.ui.SignUpScreenOneActivity
+import com.blogspot.thengnet.modules.signupscreenzero.data.model.ListlabeltextRowModel
+import com.blogspot.thengnet.modules.signupscreenzero.data.viewmodel.SignUpScreenZeroVM
 
 class SignUpScreenZeroActivity :
     BaseActivity<ActivitySignUpScreenZeroBinding>(R.layout.activity_sign_up_screen_zero) {
@@ -37,6 +35,10 @@ class SignUpScreenZeroActivity :
   }
 
   override fun setUpClicks(): Unit {
+    binding.btnPartZero.setOnClickListener {
+      val destIntent = SignUpScreenOneActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
   }
 
   fun onClickRecyclerListlabeltext(

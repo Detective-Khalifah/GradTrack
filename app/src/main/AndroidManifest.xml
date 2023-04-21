@@ -14,14 +14,14 @@
         <activity
             android:name="com.blogspot.thengnet.modules.courseszero.ui.CoursesZeroActivity" android:screenOrientation="portrait"/>
         <activity android:exported="true"
-            android:name="com.blogspot.thengnet.modules.splashscreenzero.ui.SplashScreenZeroActivity" android:screenOrientation="portrait">
+            android:name="com.blogspot.thengnet.modules.onboardingscreenzero.ui.OnboardingScreenZeroActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.blogspot.thengnet.modules.splashscreentwo.ui.SplashScreenTwoActivity" android:screenOrientation="portrait"/>
+            android:name="com.blogspot.thengnet.modules.onboardingscreentwo.ui.OnboardingScreenTwoActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity" android:screenOrientation="portrait"/>
         <activity
@@ -43,7 +43,7 @@
         <activity
             android:name="com.blogspot.thengnet.modules.courses0n.ui.Courses0nActivity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.blogspot.thengnet.modules.splashscreenone.ui.SplashScreenOneActivity" android:screenOrientation="portrait"/>
+            android:name="com.blogspot.thengnet.modules.onboardingscreenone.ui.OnboardingScreenOneActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.dashboardone.ui.DashboardOneActivity" android:screenOrientation="portrait"/>
         <activity

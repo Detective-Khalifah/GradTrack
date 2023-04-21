@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="splashScreenOneVM" type="com.blogspot.thengnet.modules.splashscreenone.data.viewmodel.SplashScreenOneVM"/>
+        <variable name="onboardingScreenTwoVM" type="com.blogspot.thengnet.modules.onboardingscreentwo.data.viewmodel.OnboardingScreenTwoVM"/>
     </data>
-    <LinearLayout android:id="@+id/linearSplashScreenO"
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearOnboardingScreenTwo"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylewhite_A700">
@@ -13,8 +14,8 @@
             android:layout_marginTop="@dimen/_159pxv"
             android:layout_width="match_parent"
             android:scaleType="fitXY"
-            imageRes="@{@drawable/img_imageprocessin_271x360}"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_imageprocessin_271x360"/>
+            imageRes="@{@drawable/img_imageprocessin_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_imageprocessin_1"/>
         <LinearLayout android:gravity="center_vertical"
             android:id="@+id/linearOnboardingProg"
             android:layout_height="wrap_content"
@@ -28,6 +29,13 @@
                 android:layout_height="@dimen/_12pxh"
                 android:layout_marginBottom="@dimen/_10pxv"
                 android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_901_radius_6"
+                android:id="@+id/viewIconOne"
+                android:layout_height="@dimen/_12pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
             <LinearLayout android:gravity="center_horizontal"
                 android:id="@+id/linearSegment"
                 android:layout_height="wrap_content"
@@ -36,7 +44,7 @@
                 android:orientation="vertical" style="@style/groupStylegreen_100cornerRadius">
                 <View
                     android:background="@drawable/rectangle_bg_teal_200_radius_6"
-                    android:id="@+id/viewIconOne"
+                    android:id="@+id/viewIconTwo"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="@dimen/_12pxh"
                     android:layout_marginBottom="@dimen/_10pxv"
@@ -44,17 +52,10 @@
                     android:layout_marginStart="@dimen/_22pxh"
                     android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
             </LinearLayout>
-            <View
-                android:background="@drawable/rectangle_border_gray_800_radius_6"
-                android:id="@+id/viewIconTwo"
-                android:layout_height="@dimen/_12pxh"
-                android:layout_marginBottom="@dimen/_10pxv"
-                android:layout_marginStart="@dimen/_6pxh"
-                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_12pxh"/>
         </LinearLayout>
         <LinearLayout android:id="@+id/linearPrevNextButto"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_31pxh"
+            android:layout_marginEnd="@dimen/_43pxh"
             android:layout_marginStart="@dimen/_43pxh"
             android:layout_marginTop="@dimen/_81pxv"
             android:layout_width="match_parent" android:orientation="horizontal">
@@ -75,10 +76,10 @@
                 style="@style/btnSolidRounded" tools:text="@string/lbl_previous"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnNext"
+                android:id="@+id/btnEnroll"
                 android:layout_height="@dimen/_40pxv"
-                android:layout_marginStart="@dimen/_104pxh"
-                android:layout_width="@dimen/_78pxh"
+                android:layout_marginStart="@dimen/_85pxh"
+                android:layout_width="@dimen/_85pxh"
                 android:letterSpacing="0.01"
                 android:lineSpacingExtra="@dimen/_3pxh"
                 android:paddingBottom="@dimen/_11pxv"
@@ -86,9 +87,9 @@
                 android:paddingStart="@dimen/_24pxh"
                 android:paddingTop="@dimen/_11pxv"
                 android:singleLine="true"
-                android:text="@string/lbl_next"
+                android:text="@string/lbl_enroll"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_next"/>
+                style="@style/btnSolidRounded" tools:text="@string/lbl_enroll"/>
         </LinearLayout>
         <View android:background="@drawable/rectangle_bg_gray_900"
             android:id="@+id/lineHome"
