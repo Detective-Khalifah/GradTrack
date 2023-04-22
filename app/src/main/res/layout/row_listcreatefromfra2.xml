@@ -4,7 +4,7 @@
         <variable name="listcreatefromfra2RowModel" type="com.blogspot.thengnet.modules.signupscreensix.data.model.Listcreatefromfra2RowModel"/>
     </data>
     <LinearLayout android:gravity="start"
-        android:id="@+id/linearColumncreatefromfra"
+        android:id="@+id/linearEnrollmentForm"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylecornerRadius_1">

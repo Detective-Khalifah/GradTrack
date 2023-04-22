@@ -1,162 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
-        <variable name="enrollmentScreenZeroVM" type="com.blogspot.thengnet.modules.enrollmentscreenzero.data.viewmodel.EnrollmentScreenZeroVM"/>
+
+        <variable
+            name="enrollmentScreenZeroVM"
+            type="com.blogspot.thengnet.modules.enrollmentscreenzero.data.viewmodel.EnrollmentScreenZeroVM" />
     </data>
-    <LinearLayout android:gravity="center_horizontal"
-        android:id="@+id/linearEnrollmentScre"
-        android:layout_height="match_parent"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintEnrollmentScreen"
+        style="@style/groupStylewhite_1"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStylewhite_1">
-        <ImageView android:id="@+id/imageGroupSix"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="@dimen/_290pxh"
-            android:layout_marginEnd="@dimen/_1pxh"
-            android:layout_marginTop="@dimen/_63pxv"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageGroupSix"
             android:layout_width="@dimen/_359pxh"
-            android:scaleType="fitXY" android:src="@drawable/img_group6"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_group6"/>
-        <LinearLayout android:gravity="start"
-            android:id="@+id/linearColumncreatefromfra"
+            android:layout_height="@dimen/_290pxh"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_63pxv"
+            android:layout_marginEnd="@dimen/_1pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_group6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_group6" />
+
+        <LinearLayout
+            android:id="@+id/linearEnrollmentForm"
+            style="@style/groupStylecornerRadius"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_36pxh"
             android:layout_marginStart="@dimen/_36pxh"
             android:layout_marginTop="@dimen/_33pxv"
-            android:layout_width="wrap_content"
-            android:orientation="vertical" style="@style/groupStylecornerRadius">
-            <HorizontalScrollView android:fillViewport="true"
-                android:id="@+id/horizontalScrollHorizontalscrollcreatefromfra"
+            android:layout_marginEnd="@dimen/_36pxh"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageGroupSix">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/_180pxh"
+                android:layout_height="@dimen/_56pxv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/txtRobotoregular12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/lbl_enrollment_code"
+                    android:inputType="text|textCapCharacters"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEnroll"
+                style="@style/btnSolidRounded_1"
+                android:layout_width="@dimen/_85pxh"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent" android:scrollbars="none">
-                <FrameLayout android:id="@+id/frameStackcreatefromfra"
-                    android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_180pxh">
-                    <View
-                        android:background="@drawable/rectangle_border_gray_901_radius_4"
-                        android:id="@+id/viewCreatefromfra"
-                        android:layout_gravity="center"
-                        android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_210pxh"/>
-                    <ImageView android:id="@+id/imageClose"
-                        android:layout_gravity="end"
-                        android:layout_height="@dimen/_20pxh"
-                        android:layout_marginBottom="@dimen/_18pxv"
-                        android:layout_marginStart="@dimen/_10pxh"
-                        android:layout_marginTop="@dimen/_18pxv"
-                        android:layout_width="@dimen/_20pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/img_close"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
-                    <LinearLayout android:id="@+id/linearContent"
-                        android:layout_gravity="top|start"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10pxv"
-                        android:layout_marginEnd="@dimen/_10pxh"
-                        android:layout_width="wrap_content" android:orientation="vertical">
-                        <TextView android:ellipsize="end"
-                            android:id="@+id/txtLabeltext"
-                            android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:letterSpacing="0.02"
-                            android:lineSpacingExtra="@dimen/_3pxh"
-                            android:paddingBottom="@dimen/_1pxv"
-                            android:paddingEnd="@dimen/_4pxh"
-                            android:singleLine="true"
-                            android:text="@{enrollmentScreenZeroVM.enrollmentScreenZeroModel.txtLabeltext}"
-                            style="@style/txtSolid" tools:text="@string/lbl_enrollment_code"/>
-                        <View android:background="@color/black_900"
-                            android:id="@+id/lineCaret"
-                            android:layout_height="@dimen/_16pxv"
-                            android:layout_marginEnd="@dimen/_10pxh"
-                            android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_1pxh"/>
-                    </LinearLayout>
-                </FrameLayout>
-            </HorizontalScrollView>
-            <TextView android:ellipsize="end"
-                android:id="@+id/txtSupportingtextOne"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_36pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_marginEnd="@dimen/_36pxh"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_enroll"
+                android:textAllCaps="false"
+                tools:text="@string/lbl_enroll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearEnrollmentForm">
+
+            <TextView
+                android:id="@+id/txtAlreadyenrolle"
+                style="@style/txtRobotomedium14"
                 android:layout_width="wrap_content"
-                android:letterSpacing="0.02"
-                android:lineSpacingExtra="@dimen/_3pxh"
-                android:singleLine="true"
-                android:text="@{enrollmentScreenZeroVM.enrollmentScreenZeroModel.txtSupportingtextOne}"
-                style="@style/txtRobotoregular12" tools:text="@string/lbl_supporting_text"/>
-        </LinearLayout>
-        <androidx.appcompat.widget.AppCompatButton
-            android:ellipsize="end" android:gravity="center"
-            android:id="@+id/btnEnroll"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="@dimen/_40pxv"
-            android:layout_marginEnd="@dimen/_36pxh"
-            android:layout_marginStart="@dimen/_36pxh"
-            android:layout_marginTop="@dimen/_3pxv"
-            android:layout_width="@dimen/_85pxh"
-            android:letterSpacing="0.01"
-            android:lineSpacingExtra="@dimen/_3pxh"
-            android:paddingBottom="@dimen/_11pxv"
-            android:paddingEnd="@dimen/_24pxh"
-            android:paddingStart="@dimen/_24pxh"
-            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
-            android:text="@string/lbl_enroll"
-            android:textAllCaps="false" style="@style/btnSolidRounded_1" tools:text="@string/lbl_enroll"/>
-        <TextView android:ellipsize="end"
-            android:id="@+id/txtAlreadyenrolle"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_36pxh"
-            android:layout_marginStart="@dimen/_36pxh"
-            android:layout_marginTop="@dimen/_59pxv"
-            android:layout_width="wrap_content"
-            android:letterSpacing="0.01"
-            android:lineSpacingExtra="@dimen/_3pxh"
-            android:singleLine="true"
-            android:text="@{enrollmentScreenZeroVM.enrollmentScreenZeroModel.txtAlreadyenrolle}"
-            style="@style/txtRobotomedium14" tools:text="@string/msg_already_enrolle"/>
-        <LinearLayout android:id="@+id/linearSignInUpButt"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_31pxh"
-            android:layout_marginStart="@dimen/_36pxh"
-            android:layout_marginTop="@dimen/_1pxv"
-            android:layout_width="match_parent" android:orientation="horizontal">
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnSignUp"
-                android:layout_height="@dimen/_40pxv"
-                android:layout_width="@dimen/_97pxh"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_36pxh"
+                android:layout_marginTop="@dimen/_59pxv"
+                android:layout_marginEnd="@dimen/_36pxh"
+                android:ellipsize="end"
                 android:letterSpacing="0.01"
                 android:lineSpacingExtra="@dimen/_3pxh"
-                android:paddingBottom="@dimen/_11pxv"
-                android:paddingEnd="@dimen/_24pxh"
-                android:paddingStart="@dimen/_24pxh"
-                android:paddingTop="@dimen/_11pxv"
                 android:singleLine="true"
-                android:text="@string/lbl_sign_up"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_sign_up"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
-                android:id="@+id/btnSignIn"
-                android:layout_height="@dimen/_40pxv"
-                android:layout_marginStart="@dimen/_104pxh"
-                android:layout_width="@dimen/_92pxh"
-                android:letterSpacing="0.01"
-                android:lineSpacingExtra="@dimen/_3pxh"
-                android:paddingBottom="@dimen/_11pxv"
-                android:paddingEnd="@dimen/_24pxh"
-                android:paddingStart="@dimen/_24pxh"
-                android:paddingTop="@dimen/_11pxv"
-                android:singleLine="true"
-                android:text="@string/lbl_sign_in"
-                android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_sign_in"/>
+                android:text="@{enrollmentScreenZeroVM.enrollmentScreenZeroModel.txtAlreadyenrolle}"
+                tools:text="@string/msg_already_enrolle" />
+
+            <LinearLayout
+                android:id="@+id/linearSignInUpButt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_36pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_31pxh"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignUp"
+                    style="@style/btnSolidRounded"
+                    android:layout_width="@dimen/_97pxh"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_sign_up"
+                    android:textAllCaps="false"
+                    tools:text="@string/lbl_sign_up" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignIn"
+                    style="@style/btnSolidRounded"
+                    android:layout_width="@dimen/_92pxh"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_104pxh"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_sign_in"
+                    android:textAllCaps="false"
+                    tools:text="@string/lbl_sign_in" />
+            </LinearLayout>
         </LinearLayout>
-        <View android:background="@drawable/rectangle_bg_gray_900"
-            android:id="@+id/lineHome"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="@dimen/_1pxv"
-            android:layout_marginBottom="@dimen/_9pxv"
-            android:layout_marginEnd="@dimen/_36pxh"
-            android:layout_marginStart="@dimen/_36pxh"
-            android:layout_marginTop="@dimen/_119pxv" android:layout_width="@dimen/_62pxh"/>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

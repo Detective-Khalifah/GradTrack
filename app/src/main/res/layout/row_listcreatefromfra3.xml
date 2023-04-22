@@ -3,7 +3,7 @@
     <data>
         <variable name="listcreatefromfra3RowModel" type="com.blogspot.thengnet.modules.signinscreenzero.data.model.Listcreatefromfra3RowModel"/>
     </data>
-    <LinearLayout android:id="@+id/linearColumncreatefromfra"
+    <LinearLayout android:id="@+id/linearEnrollmentForm"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
