@@ -44,16 +44,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageGroupSix">
-
+            
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="@dimen/_180pxh"
-                android:layout_height="@dimen/_56pxv">
+                android:layout_height="@dimen/_56pxv"
+                android:hint="@string/lbl_enrollment_code"
+                app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/txtRobotoregular12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/lbl_enrollment_code"
                     android:inputType="text|textCapCharacters"
                     android:letterSpacing="0.02"
                     android:lineSpacingExtra="@dimen/_3pxh"
