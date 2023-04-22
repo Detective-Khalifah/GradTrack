@@ -21,14 +21,14 @@ class SignUpScreenSevenActivity :
   }
 
   override fun setUpClicks(): Unit {
-    binding.imageArrowleft.setOnClickListener {
-      val destIntent = SignUpScreenSixActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.imageArrowleft.setOnClickListener {
-      finish()
-    }
-    binding.linearPrevNextButton.setOnClickListener {
+//    binding.imageArrowleft.setOnClickListener {
+//      val destIntent = SignUpScreenSixActivity.getIntent(this, null)
+//      startActivity(destIntent)
+//    }
+//    binding.imageArrowleft.setOnClickListener {
+//      finish()
+//    }
+    binding.btnSignUp.setOnClickListener {
       val destIntent = DashboardZeroActivity.getIntent(this, null)
       startActivity(destIntent)
     }

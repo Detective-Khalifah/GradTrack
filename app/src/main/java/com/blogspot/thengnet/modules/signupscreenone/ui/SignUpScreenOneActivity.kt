@@ -8,13 +8,10 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenOneBinding
-import com.blogspot.thengnet.modules.signupscreenone.`data`.model.Listlabeltext1RowModel
-import com.blogspot.thengnet.modules.signupscreenone.`data`.viewmodel.SignUpScreenOneVM
+import com.blogspot.thengnet.modules.signupscreenone.data.model.Listlabeltext1RowModel
+import com.blogspot.thengnet.modules.signupscreenone.data.viewmodel.SignUpScreenOneVM
 import com.blogspot.thengnet.modules.signupscreentwo.ui.SignUpScreenTwoActivity
 import com.blogspot.thengnet.modules.signupscreenzero.ui.SignUpScreenZeroActivity
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
 
 class SignUpScreenOneActivity :
     BaseActivity<ActivitySignUpScreenOneBinding>(R.layout.activity_sign_up_screen_one) {
@@ -22,19 +19,19 @@ class SignUpScreenOneActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listlabeltextAdapter =
-    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
-    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
-    listlabeltextAdapter.setOnItemClickListener(
-    object : ListlabeltextAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listlabeltext1RowModel) {
-        onClickRecyclerListlabeltext(view, position, item)
-      }
-    }
-    )
-    viewModel.listlabeltextList.observe(this) {
-      listlabeltextAdapter.updateData(it)
-    }
+//    val listlabeltextAdapter =
+//    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
+//    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
+//    listlabeltextAdapter.setOnItemClickListener(
+//    object : ListlabeltextAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : Listlabeltext1RowModel) {
+//        onClickRecyclerListlabeltext(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listlabeltextList.observe(this) {
+//      listlabeltextAdapter.updateData(it)
+//    }
     binding.signUpScreenOneVM = viewModel
   }
 
@@ -47,13 +44,7 @@ class SignUpScreenOneActivity :
       val destIntent = SignUpScreenZeroActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.imageArrowleft.setOnClickListener {
-      val destIntent = SignUpScreenZeroActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.imageArrowleft.setOnClickListener {
-      finish()
-    }
+
   }
 
   fun onClickRecyclerListlabeltext(

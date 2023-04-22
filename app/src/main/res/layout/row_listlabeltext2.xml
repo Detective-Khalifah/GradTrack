@@ -25,7 +25,7 @@
                 android:paddingStart="@dimen/_4pxh"
                 android:singleLine="true"
                 android:text="@{listlabeltext2RowModel.txtLabeltext}"
-                style="@style/txtSolid" tools:text="@string/lbl_address"/>
+                style="@style/txtSolid" tools:text="@string/hint_address"/>
             <View android:background="@color/gray_700"
                 android:id="@+id/lineCaret"
                 android:layout_height="@dimen/_16pxv"

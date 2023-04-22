@@ -13,7 +13,7 @@ data class SignUpScreenOneModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtFloatingLabel: String? = MyApp.getInstance().resources.getString(R.string.lbl_nationality)
+  var txtFloatingLabel: String? = MyApp.getInstance().resources.getString(R.string.hint_nationality)
   ,
   /**
    * TODO Replace with dynamic value

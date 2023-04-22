@@ -8,7 +8,7 @@ data class Listcreatefromfra1RowModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltextOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_phone_number)
+  var txtLabeltextOne: String? = MyApp.getInstance().resources.getString(R.string.hint_phone_number)
   ,
   /**
    * TODO Replace with dynamic value

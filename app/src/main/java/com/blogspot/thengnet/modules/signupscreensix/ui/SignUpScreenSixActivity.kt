@@ -19,19 +19,19 @@ class SignUpScreenSixActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listcreatefromfraAdapter =
-    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
-    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
-    listcreatefromfraAdapter.setOnItemClickListener(
-    object : ListcreatefromfraAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra2RowModel) {
-        onClickRecyclerListcreatefromfra(view, position, item)
-      }
-    }
-    )
-    viewModel.listcreatefromfraList.observe(this) {
-      listcreatefromfraAdapter.updateData(it)
-    }
+//    val listcreatefromfraAdapter =
+//    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
+//    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
+//    listcreatefromfraAdapter.setOnItemClickListener(
+//    object : ListcreatefromfraAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra2RowModel) {
+//        onClickRecyclerListcreatefromfra(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listcreatefromfraList.observe(this) {
+//      listcreatefromfraAdapter.updateData(it)
+//    }
     binding.signUpScreenSixVM = viewModel
   }
 
@@ -40,14 +40,14 @@ class SignUpScreenSixActivity :
       val destIntent = SignUpScreenFiveActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.imageArrowleft.setOnClickListener {
-      val destIntent = SignUpScreenFiveActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.imageArrowleft.setOnClickListener {
-      finish()
-    }
-    binding.linearPrevNextButton.setOnClickListener {
+//    binding.imageArrowleft.setOnClickListener {
+//      val destIntent = SignUpScreenFiveActivity.getIntent(this, null)
+//      startActivity(destIntent)
+//    }
+//    binding.imageArrowleft.setOnClickListener {
+//      finish()
+//    }
+    binding.btnSignUp.setOnClickListener {
       val destIntent = SignUpScreenSevenActivity.getIntent(this, null)
       startActivity(destIntent)
     }

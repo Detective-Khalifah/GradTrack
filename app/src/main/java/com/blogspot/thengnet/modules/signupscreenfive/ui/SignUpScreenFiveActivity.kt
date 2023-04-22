@@ -19,31 +19,31 @@ class SignUpScreenFiveActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listcreatefromfraAdapter =
-    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
-    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
-    listcreatefromfraAdapter.setOnItemClickListener(
-    object : ListcreatefromfraAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra1RowModel) {
-        onClickRecyclerListcreatefromfra(view, position, item)
-      }
-    }
-    )
-    viewModel.listcreatefromfraList.observe(this) {
-      listcreatefromfraAdapter.updateData(it)
-    }
+//    val listcreatefromfraAdapter =
+//    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
+//    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
+//    listcreatefromfraAdapter.setOnItemClickListener(
+//    object : ListcreatefromfraAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra1RowModel) {
+//        onClickRecyclerListcreatefromfra(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listcreatefromfraList.observe(this) {
+//      listcreatefromfraAdapter.updateData(it)
+//    }
     binding.signUpScreenFiveVM = viewModel
   }
 
   override fun setUpClicks(): Unit {
-    binding.imageArrowleft.setOnClickListener {
-      val destIntent = SignUpScreenFourActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.imageArrowleft.setOnClickListener {
-      finish()
-    }
-    binding.linearPrevNextButton.setOnClickListener {
+//    binding.imageArrowleft.setOnClickListener {
+//      val destIntent = SignUpScreenFourActivity.getIntent(this, null)
+//      startActivity(destIntent)
+//    }
+//    binding.imageArrowleft.setOnClickListener {
+//      finish()
+//    }
+    binding.btnNext.setOnClickListener {
       val destIntent = SignUpScreenSixActivity.getIntent(this, null)
       startActivity(destIntent)
     }

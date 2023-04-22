@@ -2,24 +2,23 @@ package com.blogspot.thengnet.modules.signupscreenfive.`data`.model
 
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.di.MyApp
-import kotlin.String
 
 data class SignUpScreenFiveModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.lbl_e_mail)
+  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.hint_e_mail)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtInputtext: String? = MyApp.getInstance().resources.getString(R.string.msg_student_school)
+  var txtInputtext: String? = MyApp.getInstance().resources.getString(R.string.dummy_email)
   ,
   /**
    * TODO Replace with dynamic value
    */
   var txtSupportingtext: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_if_this_isn_t_y2)
+      MyApp.getInstance().resources.getString(R.string.helper_wrong_email)
   ,
   /**
    * TODO Replace with dynamic value

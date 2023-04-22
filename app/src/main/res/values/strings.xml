@@ -3,14 +3,13 @@
     <string name="app_name">gradtrack</string>
     <string name="loading">Loading?</string>
     <string name="no_internet_connection">No internet connection!</string>
-    <string name="lbl_upload_from">Upload from ...</string>
+    <string name="lbl_upload_from">Upload from …</string>
     <string name="lbl_here">here</string>
     <string name="lbl_graphics_design">Graphics Design</string>
     <string name="msg_computer_arch">Computer Arch. &amp; Design</string>
     <string name="lbl_back">Back</string>
     <string name="lbl_next">Next</string>
     <string name="msg_don_t_have_an_a">Don\u2019t have an account? Click here to sign up.</string>
-    <string name="msg_confirm_passwor">Confirm Password</string>
     <string name="lbl_view_details">View Details</string>
     <string name="msg_printed_circuit">Printed Circuit Board</string>
     <string name="msg_available_for">Available for _____ role(s)?</string>
@@ -19,31 +18,64 @@
     <string name="lbl_reset_password">Reset Password</string>
     <string name="lbl_courses">Courses</string>
 
-    <!-- Sign Up Form 0-->
-    <string name="lbl_first_name">First Name</string>
-    <string name="lbl_middle_name">Middle Name (Optional)</string>
-    <string name="lbl_last_name">Last Name</string>
-    <string name="lbl_nickname">Nickname</string>
+    <!-- Sign Up Form 0 -->
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_middle_name">Middle Name (Optional)</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_nickname">Nickname</string>
 
-    <!-- Sign Up Form 1-->
+    <!-- Sign Up Form 1 -->
+    <string name="hint_nationality">Nationality</string>
+    <string name="hint_state_of_origin">State of Origin</string>
+    <string name="hint_local_government_of_origin">Local Government of Origin</string>
+    <string name="hint_hometown">Hometown</string>
+
+    <!-- Sign Up Form 2 -->
+    <string name="hint_address">Address</string>
+    <string name="hint_landmark">Landmark</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_house_number">House Number (Optional)</string>
+
+    <!-- Sign Up Form 3 -->
+    <string name="hint_faculty">Faculty</string>
+    <string name="hint_department">Department</string>
+    <string name="hint_course_of_study">Course of Study</string>
+    <string name="hint_registration_number">Registration Number</string>
+
+
+    <!-- Sign Up Form 4 -->
+    <string name="dummy_registration_number">AAAA/BBB/CCC/DD</string>
+    <string name="helper_wrong_registration_number">If this isn\u2019t your registration number, return to previous to correct it!</string>
+    <string name="hint_e_mail">E-Mail</string>
+    <string name="hint_confirm_e_mail">Confirm E-Mail</string>
+
+    <!-- Sign Up Form 5 -->
+    <string name="dummy_email">student@school.name.com</string>
+    <string name="helper_wrong_email">If this isn\u2019t your e-mail, return to previous page to correct it!</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_confirm_phone_number">Confirm Phone Number</string>
+
+    <!-- Sign Up Form 6 -->
+    <string name="dummy_phone_number">+234 801 2345 678</string>
+    <string name="helper_wrong_phone_number">If this is not your e-mail, return to previous page to correct!</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+
+
+
     <string name="lbl_country">Country</string>
-    <string name="lbl_confirm_e_mail">Confirm E-Mail</string>
     <string name="lbl_new_password">New Password</string>
     <string name="lbl_5th">5th</string>
-    <string name="lbl_phone_number">Phone Number</string>
     <string name="msg_the_university">The University | 400 Level Student</string>
     <string name="lbl_failed_courses">Failed Courses</string>
     <string name="msg_enter_registere">Enter registered e-mail/phone</string>
     <string name="lbl_academic_years">Academic Years</string>
     <string name="lbl_sign_in">Sign In</string>
-    <string name="lbl_landmark">Landmark</string>
     <string name="lbl_2nd">2nd</string>
-    <string name="lbl_faculty">Faculty</string>
     <string name="lbl_contact">Contact</string>
     <string name="msg_already_enrolle">Already enrolled?</string>
     <string name="msg_forgot_password">Forgot password? Click here to  reset.</string>
     <string name="lbl_1st">1st</string>
-    <string name="lbl_state_of_origin">State of Origin</string>
     <string name="lbl_reset"> reset</string>
     <string name="lbl_label">Label</string>
     <string name="lbl_to"> to </string>
@@ -51,18 +83,14 @@
     <string name="lbl_gender">Gender</string>
     <string name="lbl_click">\? Click </string>
     <string name="msg_don_t_have_an_a2">Don\u2019t have an account? Click </string>
-    <string name="msg_local_governmen">Local Government of Origin</string>
     <string name="msg_3767_confederat">3767 Confederate Drive,... NY</string>
     <string name="lbl_to_resend"> to resend.</string>
     <string name="msg_sed_quisque_eni">Sed quisque enim tortor.</string>
     <string name="msg_john_doe_email">john.doe@email.com</string>
-    <string name="msg_if_this_isn_t_y2">If this isn\u2019t your e-mail, return to previous page to correct it!</string>
     <string name="msg_experience">Experience::___________________</string>
     <string name="msg_degree_type_do">Degree Type: Doctoral Degree</string>
     <string name="lbl_supporting_text">Supporting text</string>
     <string name="msg_enter_account_p">Enter account password</string>
-    <string name="lbl_department">Department</string>
-    <string name="lbl_password">Password</string>
     <string name="msg_sapien_nisi_lib">Sapien nisi libero quisque.</string>
     <string name="lbl_language_s">Language(s)</string>
     <string name="msg_completion_time">Completion Time: N Years</string>
@@ -74,7 +102,6 @@
     <string name="msg_current_semeste">Current Semester</string>
     <string name="msg_you_re_enrolled">You\u2019re enrolled into A University!</string>
     <string name="msg_computer_scienc">Computer Science</string>
-    <string name="lbl_nationality">Nationality</string>
     <string name="lbl_csc203">CSC203</string>
     <string name="lbl_csc202">CSC202</string>
     <string name="msg_please_enter_th">Please enter the OTP received via e-mail &amp; phone number.</string>
@@ -83,9 +110,7 @@
     <string name="msg_make_profile_pu">Make profile publicly visible</string>
     <string name="lbl_age">Age</string>
     <string name="lbl_previous">Previous</string>
-    <string name="lbl_e_mail">E-Mail</string>
     <string name="msg_skills">Skills:: __________</string>
-    <string name="lbl_hometown">Hometown</string>
     <string name="lbl_statistics">Statistics</string>
     <string name="lbl_sign_up">Sign Up</string>
     <string name="lbl_get_otp">Get OTP</string>
@@ -94,10 +119,7 @@ Venenatis laoreet elit nisl in sit id sed orci. Netus tincidunt vitae nisi, eu l
 Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="msg_portfolio">Portfolio:: __________</string>
     <string name="lbl_profile">Profile</string>
-    <string name="lbl">............</string>
     <string name="lbl_remove_photo">Remove Photo</string>
-    <string name="msg_registration_nu">Registration Number</string>
-    <string name="msg_student_school">student@school.name.com</string>
     <string name="msg_didn_t_receive">Didn\u2019t receive OTP? Click here to resend.</string>
     <string name="lbl_csc106">CSC106</string>
     <string name="lbl_enrollment_code">Enrollment Code</string>
@@ -105,7 +127,6 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="lbl_dashboard">Dashboard</string>
     <string name="lbl_part_0">Part 0</string>
     <string name="lbl_part_1">Part 1</string>
-    <string name="lbl_aaaa_bbb_ccc_dd">AAAA/BBB/CCC/DD</string>
     <string name="lbl_csc102">CSC102</string>
     <string name="lbl_part_2">Part 2</string>
     <string name="lbl_0">0</string>
@@ -121,10 +142,8 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="lbl_part_4">Part 4</string>
     <string name="msg_didn_t_receive2">Didn\u2019t receive OTP? Click </string>
     <string name="lbl_part_5">Part 5</string>
-    <string name="lbl_course_of_study">Course of Study</string>
     <string name="lbl_part_6">Part 6</string>
     <string name="lbl_part_7">Part 7</string>
-    <string name="lbl_street">Street</string>
     <string name="msg_computer_progra">Computer Programming III</string>
     <string name="lbl_cryptography_i">Cryptography I</string>
     <string name="msg_mathematical_sc">Mathematical Sciences | Sciences</string>
@@ -142,13 +161,9 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="lbl_nigerian">Nigerian</string>
     <string name="lbl_item_1">Item 1</string>
     <string name="lbl_item_2">Item 2</string>
-    <string name="msg_if_this_isn_t_y">If this isn\u2019t your registration number, return to previous to correct it!</string>
     <string name="msg_ut_diam_viverra">Ut diam viverra integer.</string>
-    <string name="lbl_address">Address</string>
-    <string name="msg_password_succes">Password succesfully reset!</string>
-    <string name="msg_house_number_o">House Number (Optional)</string>
+    <string name="msg_password_succes">Password successfully reset!</string>
     <string name="msg_in_praesent_iac">In praesent iaculis in.</string>
-    <string name="msg_confirm_phone_n">Confirm Phone Number</string>
     <string name="msg_enrolled_course">Enrolled Courses</string>
     <string name="msg_computer_progra2">Computer Programming I</string>
     <string name="msg_this_contact_has_no_phone_nu">This contact has no phone number</string>

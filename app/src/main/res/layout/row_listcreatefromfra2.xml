@@ -41,7 +41,7 @@
                     android:paddingEnd="@dimen/_4pxh"
                     android:singleLine="true"
                     android:text="@{listcreatefromfra2RowModel.txtLabeltextOne}"
-                    style="@style/txtSolid" tools:text="@string/lbl_password"/>
+                    style="@style/txtSolid" tools:text="@string/hint_password"/>
                 <View android:background="@color/gray_700"
                     android:id="@+id/lineCaret"
                     android:layout_height="@dimen/_16pxv"

@@ -41,7 +41,7 @@
                     android:paddingEnd="@dimen/_4pxh"
                     android:singleLine="true"
                     android:text="@{listcreatefromfra1RowModel.txtLabeltextOne}"
-                    style="@style/txtSolid" tools:text="@string/lbl_phone_number"/>
+                    style="@style/txtSolid" tools:text="@string/hint_phone_number"/>
                 <ImageView android:id="@+id/imageSearch"
                     android:layout_height="@dimen/_17pxh"
                     android:layout_marginEnd="@dimen/_10pxh"

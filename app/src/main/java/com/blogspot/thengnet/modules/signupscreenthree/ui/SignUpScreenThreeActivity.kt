@@ -19,19 +19,19 @@ class SignUpScreenThreeActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listlabeltextAdapter =
-    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
-    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
-    listlabeltextAdapter.setOnItemClickListener(
-    object : ListlabeltextAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listlabeltext3RowModel) {
-        onClickRecyclerListlabeltext(view, position, item)
-      }
-    }
-    )
-    viewModel.listlabeltextList.observe(this) {
-      listlabeltextAdapter.updateData(it)
-    }
+//    val listlabeltextAdapter =
+//    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
+//    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
+//    listlabeltextAdapter.setOnItemClickListener(
+//    object : ListlabeltextAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : Listlabeltext3RowModel) {
+//        onClickRecyclerListlabeltext(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listlabeltextList.observe(this) {
+//      listlabeltextAdapter.updateData(it)
+//    }
     binding.signUpScreenThreeVM = viewModel
   }
 
@@ -40,17 +40,17 @@ class SignUpScreenThreeActivity :
       val destIntent = SignUpScreenTwoActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearPrevNextButton.setOnClickListener {
+    binding.btnNext.setOnClickListener {
       val destIntent = SignUpScreenFourActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.imageArrowleft.setOnClickListener {
-      val destIntent = SignUpScreenTwoActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.imageArrowleft.setOnClickListener {
-      finish()
-    }
+//    binding.imageArrowleft.setOnClickListener {
+//      val destIntent = SignUpScreenTwoActivity.getIntent(this, null)
+//      startActivity(destIntent)
+//    }
+//    binding.imageArrowleft.setOnClickListener {
+//      finish()
+//    }
   }
 
   fun onClickRecyclerListlabeltext(

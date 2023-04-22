@@ -45,9 +45,9 @@
                 android:id="@+id/linearBiodata0Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center"
                 android:orientation="vertical">
 
+                <!-- TODO: Display in Appbar instead -->
                 <TextView
                     android:id="@+id/txtSignUp"
                     style="@style/txtRobotoromancondensedblack36"
@@ -81,7 +81,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_56pxv"
-                    android:hint="@string/lbl_first_name"
+                    android:hint="@string/hint_first_name"
                     app:endIconMode="clear_text"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -89,7 +89,7 @@
                         style="@style/txtRobotoregular12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="text|textCapCharacters"
+                        android:inputType="text|textPersonName|textCapCharacters"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="@dimen/_3pxh"
                         android:singleLine="true"
@@ -101,7 +101,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_56pxv"
-                    android:hint="@string/lbl_middle_name"
+                    android:hint="@string/hint_middle_name"
                     app:endIconMode="clear_text"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -109,7 +109,7 @@
                         style="@style/txtRobotoregular12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="text|textCapCharacters"
+                        android:inputType="text|textPersonName|textCapCharacters"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="@dimen/_3pxh"
                         android:singleLine="true"
@@ -121,7 +121,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_56pxv"
-                    android:hint="@string/lbl_last_name"
+                    android:hint="@string/hint_last_name"
                     app:endIconMode="clear_text"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -129,7 +129,7 @@
                         style="@style/txtRobotoregular12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="text|textCapCharacters"
+                        android:inputType="text|textPersonName|textCapCharacters"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="@dimen/_3pxh"
                         android:singleLine="true"
@@ -141,7 +141,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_56pxv"
-                    android:hint="@string/lbl_nickname"
+                    android:hint="@string/hint_nickname"
                     app:endIconMode="clear_text"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -149,7 +149,7 @@
                         style="@style/txtRobotoregular12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="text|textCapCharacters"
+                        android:inputType="text|textPersonName|textCapCharacters"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="@dimen/_3pxh"
                         android:singleLine="true"

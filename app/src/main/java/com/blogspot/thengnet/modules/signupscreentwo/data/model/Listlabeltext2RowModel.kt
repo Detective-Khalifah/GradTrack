@@ -8,6 +8,6 @@ data class Listlabeltext2RowModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.lbl_address)
+  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.hint_address)
 
 )
