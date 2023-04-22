@@ -18,24 +18,24 @@ class SignUpScreenZeroActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listlabeltextAdapter =
-    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
-    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
-    listlabeltextAdapter.setOnItemClickListener(
-    object : ListlabeltextAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : ListlabeltextRowModel) {
-        onClickRecyclerListlabeltext(view, position, item)
-      }
-    }
-    )
-    viewModel.listlabeltextList.observe(this) {
-      listlabeltextAdapter.updateData(it)
-    }
+//    val listlabeltextAdapter =
+//    ListlabeltextAdapter(viewModel.listlabeltextList.value?:mutableListOf())
+////    binding.recyclerListlabeltext.adapter = listlabeltextAdapter
+//    listlabeltextAdapter.setOnItemClickListener(
+//    object : ListlabeltextAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : ListlabeltextRowModel) {
+//        onClickRecyclerListlabeltext(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listlabeltextList.observe(this) {
+//      listlabeltextAdapter.updateData(it)
+//    }
     binding.signUpScreenZeroVM = viewModel
   }
 
   override fun setUpClicks(): Unit {
-    binding.btnPartZero.setOnClickListener {
+    binding.btnNext.setOnClickListener {
       val destIntent = SignUpScreenOneActivity.getIntent(this, null)
       startActivity(destIntent)
     }

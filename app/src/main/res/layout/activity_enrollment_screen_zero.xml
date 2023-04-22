@@ -45,10 +45,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageGroupSix">
 
+            <!-- TODO: Find the issue (in coloring) causing outlined Text Field to be invisible when
+                    device is in Dark Mode; temporary fix is to use "gray_800" color in
+                    "boxStrokeColor", "hintTextColor" & "endIconTint" app attributes -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="@dimen/_180pxh"
                 android:layout_height="@dimen/_56pxv"
                 android:hint="@string/lbl_enrollment_code"
+                android:layout_margin="@dimen/_8pxh"
+                app:boxStrokeColor="@color/gray_800"
+                app:hintTextColor="@color/gray_800"
+                app:endIconTint="@color/gray_800"
+                app:placeholderTextColor="@color/gray_800"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText

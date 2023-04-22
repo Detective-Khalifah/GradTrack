@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODO: Customise to fit dark mode -->
     <!-- Base application theme. -->
     <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->

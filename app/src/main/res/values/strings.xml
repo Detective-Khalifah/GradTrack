@@ -18,7 +18,14 @@
     <string name="msg_binary_computin">Binary Computing</string>
     <string name="lbl_reset_password">Reset Password</string>
     <string name="lbl_courses">Courses</string>
+
+    <!-- Sign Up Form 0-->
     <string name="lbl_first_name">First Name</string>
+    <string name="lbl_middle_name">Middle Name (Optional)</string>
+    <string name="lbl_last_name">Last Name</string>
+    <string name="lbl_nickname">Nickname</string>
+
+    <!-- Sign Up Form 1-->
     <string name="lbl_country">Country</string>
     <string name="lbl_confirm_e_mail">Confirm E-Mail</string>
     <string name="lbl_new_password">New Password</string>
@@ -41,7 +48,6 @@
     <string name="lbl_label">Label</string>
     <string name="lbl_to"> to </string>
     <string name="lbl_to_sign_up"> to sign up.</string>
-    <string name="lbl_last_name">Last Name</string>
     <string name="lbl_gender">Gender</string>
     <string name="lbl_click">\? Click </string>
     <string name="msg_don_t_have_an_a2">Don\u2019t have an account? Click </string>
@@ -93,7 +99,6 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="msg_registration_nu">Registration Number</string>
     <string name="msg_student_school">student@school.name.com</string>
     <string name="msg_didn_t_receive">Didn\u2019t receive OTP? Click here to resend.</string>
-    <string name="lbl_nickname">Nickname</string>
     <string name="lbl_csc106">CSC106</string>
     <string name="lbl_enrollment_code">Enrollment Code</string>
     <string name="lbl_csc105">CSC105</string>
