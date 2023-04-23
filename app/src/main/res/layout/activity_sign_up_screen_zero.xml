@@ -162,7 +162,7 @@
                     android:id="@+id/btnNext"
                     style="@style/btnSolidRounded"
                     android:layout_width="@dimen/_78pxh"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40pxv"
                     android:layout_gravity="end"
                     android:layout_marginStart="@dimen/_10pxh"
                     android:layout_marginTop="@dimen/_12pxv"

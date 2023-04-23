@@ -74,7 +74,6 @@
                 android:id="@+id/linearOneTimePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <TextView
@@ -248,7 +247,7 @@
                         android:id="@+id/btnPrevious"
                         style="@style/btnSolidRounded"
                         android:layout_width="@dimen/_104pxh"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40pxv"
                         android:ellipsize="end"
                         android:gravity="center"
                         android:letterSpacing="0.01"
@@ -262,7 +261,7 @@
                         android:id="@+id/btnSignUp"
                         style="@style/btnSolidRounded"
                         android:layout_width="@dimen/_97pxh"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40pxv"
                         android:layout_marginStart="@dimen/_104pxh"
                         android:ellipsize="end"
                         android:gravity="center"
