@@ -125,7 +125,6 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_56pxv"
                         android:layout_weight="0.25"
@@ -148,14 +147,12 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_56pxv"
                         android:layout_weight="0.25"
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            style="@style/txtRobotoromanextrabold75"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -171,14 +168,12 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_56pxv"
                         android:layout_weight="0.25"
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            style="@style/txtRobotoromanextrabold75"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -194,14 +189,12 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_56pxv"
                         android:layout_weight="0.25"
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            style="@style/txtRobotoromanextrabold75"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
