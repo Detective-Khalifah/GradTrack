@@ -9,11 +9,8 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivityForgotPasswordTwoBinding
 import com.blogspot.thengnet.modules.forgotpasswordthree.ui.ForgotPasswordThreeActivity
-import com.blogspot.thengnet.modules.forgotpasswordtwo.`data`.model.Listcreatefromfra4RowModel
-import com.blogspot.thengnet.modules.forgotpasswordtwo.`data`.viewmodel.ForgotPasswordTwoVM
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
+import com.blogspot.thengnet.modules.forgotpasswordtwo.data.model.Listcreatefromfra4RowModel
+import com.blogspot.thengnet.modules.forgotpasswordtwo.data.viewmodel.ForgotPasswordTwoVM
 
 class ForgotPasswordTwoActivity :
     BaseActivity<ActivityForgotPasswordTwoBinding>(R.layout.activity_forgot_password_two) {
@@ -21,19 +18,19 @@ class ForgotPasswordTwoActivity :
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listcreatefromfraAdapter =
-    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
-    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
-    listcreatefromfraAdapter.setOnItemClickListener(
-    object : ListcreatefromfraAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra4RowModel) {
-        onClickRecyclerListcreatefromfra(view, position, item)
-      }
-    }
-    )
-    viewModel.listcreatefromfraList.observe(this) {
-      listcreatefromfraAdapter.updateData(it)
-    }
+//    val listcreatefromfraAdapter =
+//    ListcreatefromfraAdapter(viewModel.listcreatefromfraList.value?:mutableListOf())
+//    binding.recyclerListcreatefromfra.adapter = listcreatefromfraAdapter
+//    listcreatefromfraAdapter.setOnItemClickListener(
+//    object : ListcreatefromfraAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : Listcreatefromfra4RowModel) {
+//        onClickRecyclerListcreatefromfra(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.listcreatefromfraList.observe(this) {
+//      listcreatefromfraAdapter.updateData(it)
+//    }
     binding.forgotPasswordTwoVM = viewModel
   }
 

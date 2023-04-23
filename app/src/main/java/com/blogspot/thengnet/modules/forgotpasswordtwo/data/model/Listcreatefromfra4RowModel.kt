@@ -8,7 +8,7 @@ data class Listcreatefromfra4RowModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.lbl_new_password)
+  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.hint_new_password)
   ,
   /**
    * TODO Replace with dynamic value

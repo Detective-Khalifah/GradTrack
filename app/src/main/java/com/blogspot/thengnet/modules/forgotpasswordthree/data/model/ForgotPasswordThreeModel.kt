@@ -9,6 +9,6 @@ data class ForgotPasswordThreeModel(
    * TODO Replace with dynamic value
    */
   var txtPasswordsucces: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_password_succes)
+      MyApp.getInstance().resources.getString(R.string.msg_password_reset_successfully)
 
 )

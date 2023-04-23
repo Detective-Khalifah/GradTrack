@@ -9,7 +9,7 @@ data class SignUpScreenSevenModel(
    * TODO Replace with dynamic value
    */
   var txtPleaseenterth: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_please_enter_th)
+      MyApp.getInstance().resources.getString(R.string.msg_please_enter_the_otp)
   ,
   /**
    * TODO Replace with dynamic value

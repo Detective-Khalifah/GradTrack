@@ -9,6 +9,7 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignInScreenZeroBinding
 import com.blogspot.thengnet.modules.dashboardzero.ui.DashboardZeroActivity
+import com.blogspot.thengnet.modules.forgotpasswordzero.ui.ForgotPasswordZeroActivity
 import com.blogspot.thengnet.modules.signinscreenzero.data.model.Listcreatefromfra3RowModel
 import com.blogspot.thengnet.modules.signinscreenzero.data.viewmodel.SignInScreenZeroVM
 import com.blogspot.thengnet.modules.signupscreenzero.ui.SignUpScreenZeroActivity
@@ -38,6 +39,10 @@ class SignInScreenZeroActivity :
   override fun setUpClicks(): Unit {
     binding.txtConfirmation.setOnClickListener {
       val destIntent = SignUpScreenZeroActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.txtForgotPwd.setOnClickListener {
+      val destIntent = ForgotPasswordZeroActivity.getIntent(this, null)
       startActivity(destIntent)
     }
 //    binding.imageArrowleft.setOnClickListener {

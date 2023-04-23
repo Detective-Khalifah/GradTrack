@@ -24,6 +24,6 @@ data class ForgotPasswordZeroModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltextOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_get_otp)
+  var txtLabeltextOne: String? = MyApp.getInstance().resources.getString(R.string.get_otp)
 
 )

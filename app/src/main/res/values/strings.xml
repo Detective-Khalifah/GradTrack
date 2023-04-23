@@ -9,13 +9,11 @@
     <string name="msg_computer_arch">Computer Arch. &amp; Design</string>
     <string name="lbl_back">Back</string>
     <string name="lbl_next">Next</string>
-    <string name="msg_don_t_have_an_a">Don\u2019t have an account? Click here to sign up.</string>
     <string name="lbl_view_details">View Details</string>
     <string name="msg_printed_circuit">Printed Circuit Board</string>
     <string name="msg_available_for">Available for _____ role(s)?</string>
     <string name="lbl2">.</string>
     <string name="msg_binary_computin">Binary Computing</string>
-    <string name="lbl_reset_password">Reset Password</string>
     <string name="lbl_courses">Courses</string>
 
     <!-- Sign Up Form 0 -->
@@ -64,11 +62,31 @@
     <!-- Sign In Form -->
     <string name="hint_e_mail_or_phone">E-Mail or Phone Number</string>
     <string name="helper_enter_registered_email_or_phone_number">Enter registered e-mail/phone</string>
+    <string name="msg_forgot_password">Forgot password? Click here to reset.</string>
+    <string name="msg_don_t_have_an_a">Don\u2019t have an account? Click here to sign up.</string>
+
+    <string name="msg_don_t_have_an_account">Don\u2019t have an account? Click </string>
+    <string name="msg_to_sign_up"> to sign up.</string>
+
+    <!-- Forgot Password 0 Form -->
+    <string name="helper_enter_registered_email">Enter registered e-mail</string>
+    <string name="get_otp">Get OTP</string>
+
+    <!-- Forgot Password 1 Form -->
+    <string name="reset_password">Reset Password</string>
+    <string name="msg_please_enter_the_otp">Please enter the OTP received via e-mail &amp; phone number.</string>
+    <string name="msg_didn_t_receive">Didn\u2019t receive OTP? Click here to resend.</string>
+
+    <!-- Forgot Password 2 Form -->
+    <string name="helper_passwords_must_match">Passwords must match</string>
+    <string name="hint_new_password">New Password</string>
+
+    <!-- Forgot Password 3 -->
+    <string name="msg_password_reset_successfully">Password successfully reset!</string>
 
 
 
     <string name="lbl_country">Country</string>
-    <string name="lbl_new_password">New Password</string>
     <string name="lbl_5th">5th</string>
     <string name="msg_the_university">The University | 400 Level Student</string>
     <string name="lbl_failed_courses">Failed Courses</string>
@@ -77,15 +95,12 @@
     <string name="lbl_2nd">2nd</string>
     <string name="lbl_contact">Contact</string>
     <string name="msg_already_enrolle">Already enrolled?</string>
-    <string name="msg_forgot_password">Forgot password? Click here to  reset.</string>
     <string name="lbl_1st">1st</string>
     <string name="lbl_reset"> reset</string>
     <string name="lbl_label">Label</string>
     <string name="lbl_to"> to </string>
-    <string name="lbl_to_sign_up"> to sign up.</string>
     <string name="lbl_gender">Gender</string>
     <string name="lbl_click">\? Click </string>
-    <string name="msg_don_t_have_an_a2">Don\u2019t have an account? Click </string>
     <string name="msg_3767_confederat">3767 Confederate Drive,... NY</string>
     <string name="lbl_to_resend"> to resend.</string>
     <string name="msg_sed_quisque_eni">Sed quisque enim tortor.</string>
@@ -107,7 +122,6 @@
     <string name="msg_computer_scienc">Computer Science</string>
     <string name="lbl_csc203">CSC203</string>
     <string name="lbl_csc202">CSC202</string>
-    <string name="msg_please_enter_th">Please enter the OTP received via e-mail &amp; phone number.</string>
     <string name="lbl_csc201">CSC201</string>
     <string name="lbl_csc200">CSC200</string>
     <string name="msg_make_profile_pu">Make profile publicly visible</string>
@@ -116,14 +130,12 @@
     <string name="msg_skills">Skills:: __________</string>
     <string name="lbl_statistics">Statistics</string>
     <string name="lbl_sign_up">Sign Up</string>
-    <string name="lbl_get_otp">Get OTP</string>
     <string name="msg_lorem_ipsum_dol">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in tristique posuere semper volutpat scelerisque. Pulvinar cras gravida ornare pretium urna. Quis sed nulla quam rhoncus maecenas rhoncus laoreet integer. Lacus tellus arcu vel habitant convallis pretium. Elementum ullamcorper tincidunt odio facilisis sed platea vitae in. Tempus consequat suspendisse ipsum tempor sapien. Malesuada aliquam vulputate ipsum vitae nullam. Iaculis nullam sapien, pharetra, facilisi ultricies. Ac gravida accumsan tempus, et hac dictumst eget euismod sit. Massa odio odio in amet donec neque, laoreet egestas. Quis lobortis iaculis mi sed et vulputate mi consectetur. Augue euismod vulputate sit et tellus habitasse elementum rhoncus. Aliquet mauris bibendum velit eu nisl, a, tortor varius. Commodo quis elementum ornare pellentesque odio elementum habitant.
 Venenatis laoreet elit nisl in sit id sed orci. Netus tincidunt vitae nisi, eu laoreet nunc, nulla. Sed dolor morbi ut est quam. Lorem nec, at egestas vel. Ut vel, ornare at ac mauris proin tellus. Pellentesque fusce id sapien id sit gravida in fringilla. Amet in sed lectus ac, ultricies massa massa.
 Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="msg_portfolio">Portfolio:: __________</string>
     <string name="lbl_profile">Profile</string>
     <string name="lbl_remove_photo">Remove Photo</string>
-    <string name="msg_didn_t_receive">Didn\u2019t receive OTP? Click here to resend.</string>
     <string name="lbl_csc106">CSC106</string>
     <string name="lbl_enrollment_code">Enrollment Code</string>
     <string name="lbl_csc105">CSC105</string>
@@ -164,7 +176,6 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="lbl_item_1">Item 1</string>
     <string name="lbl_item_2">Item 2</string>
     <string name="msg_ut_diam_viverra">Ut diam viverra integer.</string>
-    <string name="msg_password_succes">Password successfully reset!</string>
     <string name="msg_in_praesent_iac">In praesent iaculis in.</string>
     <string name="msg_enrolled_course">Enrolled Courses</string>
     <string name="msg_computer_progra2">Computer Programming I</string>

@@ -11,7 +11,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameSignInScreen"
+        android:id="@+id/constraintSignInScreen"
         style="@style/groupStylewhite_A700"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -77,23 +77,23 @@
                 android:layout_height="@dimen/_360pxh"
                 android:gravity="start"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_undrawbooksre"
+                android:src="@drawable/undraw_login"
                 tools:ignore="ContentDescription"
-                tools:src="@drawable/img_undrawbooksre" />
+                tools:src="@drawable/undraw_login" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_56pxv"
-                android:hint="@string/hint_e_mail_or_phone"
-                app:helperText="@string/helper_enter_registered_email_or_phone_number"
+                android:hint="@string/hint_e_mail"
+                app:helperText="@string/helper_enter_registered_email"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/txtRobotoregular12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="phone|textEmailAddress"
+                    android:inputType="textEmailAddress"
                     android:letterSpacing="0.02"
                     android:lineSpacingExtra="@dimen/_3pxh"
                     android:singleLine="true"
@@ -141,7 +141,7 @@
                 tools:text="@string/lbl_sign_in" />
 
             <TextView
-                android:id="@+id/txtLanguage"
+                android:id="@+id/txtForgotPwd"
                 style="@style/txtRobotoromanregular16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -42,7 +42,7 @@
                     android:paddingEnd="@dimen/_4pxh"
                     android:singleLine="true"
                     android:text="@{listcreatefromfra4RowModel.txtLabeltext}"
-                    style="@style/txtSolid" tools:text="@string/lbl_new_password"/>
+                    style="@style/txtSolid" tools:text="@string/hint_new_password"/>
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtInputtext"
                     android:layout_height="wrap_content"
