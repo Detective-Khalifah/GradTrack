@@ -131,7 +131,7 @@
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            style="@style/txtRobotoromanextrabold75"
+                            style="@style/txtRobotoregular16_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -153,6 +153,7 @@
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            style="@style/txtRobotoregular16_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -174,6 +175,7 @@
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            style="@style/txtRobotoregular16_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -195,6 +197,7 @@
                         android:gravity="center_horizontal">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            style="@style/txtRobotoregular16_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
