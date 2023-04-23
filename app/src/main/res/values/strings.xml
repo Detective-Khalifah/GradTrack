@@ -61,6 +61,10 @@
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm Password</string>
 
+    <!-- Sign In Form -->
+    <string name="hint_e_mail_or_phone">E-Mail or Phone Number</string>
+    <string name="helper_enter_registered_email_or_phone_number">Enter registered e-mail/phone</string>
+
 
 
     <string name="lbl_country">Country</string>
@@ -68,7 +72,6 @@
     <string name="lbl_5th">5th</string>
     <string name="msg_the_university">The University | 400 Level Student</string>
     <string name="lbl_failed_courses">Failed Courses</string>
-    <string name="msg_enter_registere">Enter registered e-mail/phone</string>
     <string name="lbl_academic_years">Academic Years</string>
     <string name="lbl_sign_in">Sign In</string>
     <string name="lbl_2nd">2nd</string>
@@ -135,7 +138,6 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="lbl_csc100">CSC100</string>
     <string name="msg_interdum_ultric">Interdum ultrices urna ut.</string>
     <string name="lbl_john_doe">John Doe</string>
-    <string name="msg_e_mail_or_phone">E-Mail or Phone Number</string>
     <string name="msg_networking_ht">Networking - HTML5, CSS3, JS</string>
     <string name="lbl_part_3">Part 3</string>
     <string name="msg_vitae_nec_leo_c">Vitae nec leo cras egestas.</string>

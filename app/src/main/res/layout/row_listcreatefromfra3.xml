@@ -42,7 +42,7 @@
                             android:lineSpacingExtra="@dimen/_3pxh"
                             android:singleLine="true"
                             android:text="@{listcreatefromfra3RowModel.txtLabeltext}"
-                            style="@style/txtRobotoregular12_3" tools:text="@string/msg_e_mail_or_phone"/>
+                            style="@style/txtRobotoregular12_3" tools:text="@string/hint_e_mail_or_phone"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtInputtext"
                             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                             android:lineSpacingExtra="@dimen/_3pxh"
                             android:singleLine="true"
                             android:text="@{listcreatefromfra3RowModel.txtInputtext}"
-                            style="@style/txtRobotoregular16_2" tools:text="@string/msg_enter_registere"/>
+                            style="@style/txtRobotoregular16_2" tools:text="@string/helper_enter_registered_email_or_phone_number"/>
                     </LinearLayout>
                     <ImageView android:id="@+id/imageClose"
                         android:layout_height="@dimen/_20pxh"

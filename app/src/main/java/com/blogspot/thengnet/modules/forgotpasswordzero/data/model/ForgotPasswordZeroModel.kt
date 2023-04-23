@@ -8,12 +8,12 @@ data class ForgotPasswordZeroModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.msg_e_mail_or_phone)
+  var txtLabeltext: String? = MyApp.getInstance().resources.getString(R.string.hint_e_mail_or_phone)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtInputtext: String? = MyApp.getInstance().resources.getString(R.string.msg_enter_registere)
+  var txtInputtext: String? = MyApp.getInstance().resources.getString(R.string.helper_enter_registered_email_or_phone_number)
   ,
   /**
    * TODO Replace with dynamic value
