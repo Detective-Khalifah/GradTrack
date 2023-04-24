@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="courses0nVM" type="com.blogspot.thengnet.modules.courses0n.data.viewmodel.Courses0nVM"/>
+        <variable name="coursesOneVM" type="com.blogspot.thengnet.modules.coursesOne.data.viewmodel.CoursesOneVM"/>
     </data>
     <FrameLayout android:id="@+id/frameCourses0n"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:letterSpacing="0.01"
             android:lineSpacingExtra="@dimen/_5pxh"
-            android:text="@{courses0nVM.courses0nModel.txtDescription}"
+            android:text="@{coursesOneVM.MCoursesOneModel.txtDescription}"
             style="@style/txtRobotomedium12" tools:text="@string/msg_lorem_ipsum_dol"/>
         <LinearLayout android:id="@+id/linearEnrolledCourse"
             android:layout_gravity="top|center"
@@ -33,7 +33,7 @@
                 android:layout_marginTop="@dimen/_1pxv"
                 android:layout_weight="0.73" android:layout_width="0dp"
                 android:singleLine="true"
-                android:text="@{courses0nVM.courses0nModel.txtTextenrolledc}"
+                android:text="@{coursesOneVM.MCoursesOneModel.txtTextenrolledc}"
                 style="@style/txtRobotoromansemibold16" tools:text="@string/msg_computer_progra"/>
             <LinearLayout android:id="@+id/linearRowstatistics"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.91"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{courses0nVM.courses0nModel.txtStatistics}"
+                    android:text="@{coursesOneVM.MCoursesOneModel.txtStatistics}"
                     style="@style/txtRobotoromanregular14_1" tools:text="@string/lbl_statistics"/>
                 <ImageView android:id="@+id/imageVector"
                     android:layout_height="@dimen/_9pxh"

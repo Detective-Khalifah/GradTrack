@@ -10,13 +10,13 @@
         android:layout_marginBottom="@dimen/_9pxv"
         android:layout_marginTop="@dimen/_20pxv"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        android:orientation="vertical">
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearDashboardZero"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8pxh"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            android:orientation="vertical">
             <LinearLayout android:id="@+id/linearGraduationTrac"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_13pxh"
@@ -295,11 +295,6 @@
                             style="@style/txtRobotomedium10" tools:text="@string/lbl_profile"/>
                     </LinearLayout>
                 </LinearLayout>
-                <View
-                    android:background="@drawable/rectangle_bg_gray_900"
-                    android:id="@+id/lineHome"
-                    android:layout_height="@dimen/_1pxv"
-                    android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_62pxh"/>
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>

@@ -15,52 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO: Display in Appbar instead -->
-        <!--        <androidx.appcompat.widget.Toolbar-->
-        <!--            android:id="@+id/toolbarToolbar"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:gravity="start"-->
-        <!--            app:contentInsetStart="0dp">-->
-
-        <!--            <LinearLayout-->
-        <!--                android:id="@+id/linearTopappbar"-->
-        <!--                style="@style/groupStylewhite_A700"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:gravity="start"-->
-        <!--                android:orientation="horizontal">-->
-
-        <!--                <ImageView-->
-        <!--                    android:id="@+id/imageArrowleft"-->
-        <!--                    android:layout_width="@dimen/_13pxh"-->
-        <!--                    android:layout_height="@dimen/_13pxh"-->
-        <!--                    android:layout_marginStart="@dimen/_17pxh"-->
-        <!--                    android:layout_marginTop="@dimen/_12pxv"-->
-        <!--                    android:layout_marginBottom="@dimen/_20pxv"-->
-        <!--                    android:scaleType="fitXY"-->
-        <!--                    android:src="@drawable/img_arrowleft"-->
-        <!--                    tools:ignore="ContentDescription"-->
-        <!--                    tools:src="@drawable/img_arrowleft" />-->
-
-        <!--                <TextView-->
-        <!--                    android:id="@+id/txtPartCounter"-->
-        <!--                    style="@style/txtRobotoromansemibold19"-->
-        <!--                    android:layout_width="0dp"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_marginStart="@dimen/_17pxh"-->
-        <!--                    android:layout_marginTop="@dimen/_7pxv"-->
-        <!--                    android:layout_marginEnd="@dimen/_258pxh"-->
-        <!--                    android:layout_marginBottom="@dimen/_17pxv"-->
-        <!--                    android:layout_weight="0.79"-->
-        <!--                    android:ellipsize="end"-->
-        <!--                    android:lineSpacingExtra="@dimen/_4pxh"-->
-        <!--                    android:singleLine="true"-->
-        <!--                    android:text="@{signUpScreenSevenVM.signUpScreenSevenModel.txtPartCounter}"-->
-        <!--                    tools:text="@string/lbl_part_7" />-->
-        <!--            </LinearLayout>-->
-        <!--        </androidx.appcompat.widget.Toolbar>-->
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

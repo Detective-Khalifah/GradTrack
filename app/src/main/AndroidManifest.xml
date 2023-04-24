@@ -39,7 +39,7 @@
         <activity
             android:name="com.blogspot.thengnet.modules.profileone.ui.ProfileOneActivity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.blogspot.thengnet.modules.courses0n.ui.Courses0nActivity" android:screenOrientation="portrait"/>
+            android:name="com.blogspot.thengnet.modules.coursesOne.ui.CoursesOneActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.onboardingscreenone.ui.OnboardingScreenOneActivity" android:screenOrientation="portrait"/>
         <activity

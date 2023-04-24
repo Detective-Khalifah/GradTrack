@@ -18,7 +18,7 @@
             <LinearLayout android:gravity="end"
                 android:id="@+id/linearProfileVisibil"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_gravity="end"
                 android:layout_width="wrap_content" android:orientation="horizontal">
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtMakeprofilepu"

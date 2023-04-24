@@ -10,13 +10,13 @@
         android:layout_marginBottom="@dimen/_9pxv"
         android:layout_marginTop="@dimen/_20pxv"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        android:orientation="vertical" >
         <LinearLayout android:gravity="center_horizontal"
             android:id="@+id/linearDashboardOne"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8pxh"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            android:orientation="vertical">
             <LinearLayout android:gravity="end"
                 android:id="@+id/linearGraduationTrac"
                 android:layout_height="wrap_content"

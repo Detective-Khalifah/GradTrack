@@ -9,29 +9,26 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.appcomponents.views.ImagePickerFragmentDialog
 import com.blogspot.thengnet.databinding.ActivityProfileOneBinding
-import com.blogspot.thengnet.modules.profileone.`data`.model.ProfileOneRowModel
-import com.blogspot.thengnet.modules.profileone.`data`.viewmodel.ProfileOneVM
-import kotlin.Int
-import kotlin.String
-import kotlin.Unit
+import com.blogspot.thengnet.modules.profileone.data.model.ProfileOneRowModel
+import com.blogspot.thengnet.modules.profileone.data.viewmodel.ProfileOneVM
 
 class ProfileOneActivity : BaseActivity<ActivityProfileOneBinding>(R.layout.activity_profile_one) {
   private val viewModel: ProfileOneVM by viewModels<ProfileOneVM>()
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val profileOneAdapter = ProfileOneAdapter(viewModel.profileOneList.value?:mutableListOf())
-    binding.recyclerProfileOne.adapter = profileOneAdapter
-    profileOneAdapter.setOnItemClickListener(
-    object : ProfileOneAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : ProfileOneRowModel) {
-        onClickRecyclerProfileOne(view, position, item)
-      }
-    }
-    )
-    viewModel.profileOneList.observe(this) {
-      profileOneAdapter.updateData(it)
-    }
+//    val profileOneAdapter = ProfileOneAdapter(viewModel.profileOneList.value?:mutableListOf())
+//    binding.recyclerProfileOne.adapter = profileOneAdapter
+//    profileOneAdapter.setOnItemClickListener(
+//    object : ProfileOneAdapter.OnItemClickListener {
+//      override fun onItemClick(view:View, position:Int, item : ProfileOneRowModel) {
+//        onClickRecyclerProfileOne(view, position, item)
+//      }
+//    }
+//    )
+//    viewModel.profileOneList.observe(this) {
+//      profileOneAdapter.updateData(it)
+//    }
     binding.profileOneVM = viewModel
   }
 

@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/_26pxv"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        android:orientation="vertical">
         <LinearLayout android:gravity="start"
             android:id="@+id/linearColumnsearch"
             android:layout_height="0dp"

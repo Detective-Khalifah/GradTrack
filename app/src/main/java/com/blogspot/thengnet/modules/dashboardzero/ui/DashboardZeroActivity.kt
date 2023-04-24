@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivityDashboardZeroBinding
-import com.blogspot.thengnet.modules.courses0n.ui.Courses0nActivity
+import com.blogspot.thengnet.modules.coursesOne.ui.CoursesOneActivity
 import com.blogspot.thengnet.modules.courseszero.ui.CoursesZeroActivity
 import com.blogspot.thengnet.modules.dashboardone.ui.DashboardOneActivity
 import com.blogspot.thengnet.modules.dashboardzero.`data`.model.CoursescardsRowModel
@@ -92,7 +92,7 @@ class DashboardZeroActivity :
   ): Unit {
     when(view.id) {
       R.id.linearHorizontalcard -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
     }
@@ -106,19 +106,19 @@ class DashboardZeroActivity :
     /** TODO As per your logic, Add constant type for item click.*/
     when(0) {
       0 -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
       1 -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
       2 -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
       3 -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
     }

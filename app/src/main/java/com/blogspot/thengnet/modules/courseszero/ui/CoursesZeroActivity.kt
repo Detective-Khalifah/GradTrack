@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivityCoursesZeroBinding
-import com.blogspot.thengnet.modules.courses0n.ui.Courses0nActivity
+import com.blogspot.thengnet.modules.coursesOne.ui.CoursesOneActivity
 import com.blogspot.thengnet.modules.courseszero.`data`.model.CoursesZeroRowModel
 import com.blogspot.thengnet.modules.courseszero.`data`.viewmodel.CoursesZeroVM
 import com.blogspot.thengnet.modules.profilezero.ui.ProfileZeroActivity
@@ -52,7 +52,7 @@ class CoursesZeroActivity : BaseActivity<ActivityCoursesZeroBinding>(R.layout.ac
   ): Unit {
     when(view.id) {
       R.id.linearHorizontalcard -> {
-        val destIntent = Courses0nActivity.getIntent(this, null)
+        val destIntent = CoursesOneActivity.getIntent(this, null)
         startActivity(destIntent)
       }
     }

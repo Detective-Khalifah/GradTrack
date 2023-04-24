@@ -1,10 +1,10 @@
-package com.blogspot.thengnet.modules.courses0n.`data`.model
+package com.blogspot.thengnet.modules.coursesOne.`data`.model
 
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.di.MyApp
 import kotlin.String
 
-data class Courses0nModel(
+data class CoursesOneModel(
   /**
    * TODO Replace with dynamic value
    */
