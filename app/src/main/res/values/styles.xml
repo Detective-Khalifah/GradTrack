@@ -2,20 +2,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="txtRobotoregular22">
         <item name="android:textSize">@dimen/_22pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="btnSolidRounded_1">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/white_A700</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
         <item name="android:background">@drawable/rectangle_bg_black_900_radius_20</item>
     </style>
     <style name="txtRobotoregular18_1">
         <item name="android:textSize">@dimen/_18pxh</item>
-        <item name="android:textColor">@color/red_A700</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -27,20 +24,17 @@
     </style>
     <style name="txtRobotomedium16_1">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
     <style name="txtSolid_1">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/deep_purple_500</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
         <item name="android:background">@drawable/rectangle_bg_white_a701</item>
     </style>
     <style name="txtSolid_2">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/gray_900_7c</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
         <item name="android:background">@drawable/rectangle_bg_white_a701</item>
@@ -50,7 +44,6 @@
     </style>
     <style name="txtRobotoromanlight14">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">300</item>
     </style>
@@ -62,7 +55,6 @@
     </style>
     <style name="btnSolidRounded">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/white_A700</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
         <item name="android:background">@drawable/rectangle_bg_teal_201_radius_20</item>
@@ -78,7 +70,6 @@
     </style>
     <style name="txtRobotoregular18">
         <item name="android:textSize">@dimen/_18pxh</item>
-        <item name="android:textColor">@color/gray_800</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -87,13 +78,11 @@
     </style>
     <style name="txtRobotoregular16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotomedium10_1">
         <item name="android:textSize">@dimen/_10pxh</item>
-        <item name="android:textColor">@color/gray_903</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
@@ -105,7 +94,6 @@
     </style>
     <style name="txtRobotoregular14">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -114,26 +102,22 @@
     </style>
     <style name="txtRobotoregular12">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/gray_800</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotomedium14_1">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/white_A700</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
     <style name="btnSolid">
         <item name="android:textSize">@dimen/_19pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>
         <item name="android:background">@drawable/rectangle_bg_white_a700</item>
     </style>
     <style name="txtSolid">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
         <item name="android:background">@drawable/rectangle_bg_white_a701</item>
@@ -164,13 +148,11 @@
     </style>
     <style name="txtRobotomedium14">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
     <style name="txtRobotomedium16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_100</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
@@ -179,7 +161,6 @@
     </style>
     <style name="txtRobotomedium10">
         <item name="android:textSize">@dimen/_10pxh</item>
-        <item name="android:textColor">@color/gray_801</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
@@ -194,13 +175,11 @@
     </style>
     <style name="txtRobotoromanextrabold16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/light_green_300</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">800</item>
     </style>
     <style name="txtRobotomedium12">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
@@ -209,7 +188,6 @@
     </style>
     <style name="txtRobotoromansemibold20">
         <item name="android:textSize">@dimen/_20pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>
     </style>
@@ -224,7 +202,6 @@
     </style>
     <style name="txtRobotoregular7">
         <item name="android:textSize">@dimen/_7pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -233,37 +210,31 @@
     </style>
     <style name="txtRobotoromansemibold16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>
     </style>
     <style name="txtRobotoromansemibold19">
         <item name="android:textSize">@dimen/_19pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">600</item>
     </style>
     <style name="txtGoogleSansTextregular16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/google_sans_text</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotomedium9">
         <item name="android:textSize">@dimen/_9pxh</item>
-        <item name="android:textColor">@color/gray_902</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
     <style name="txtRobotoromanregular10">
         <item name="android:textSize">@dimen/_10pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoromanregular12">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -272,19 +243,16 @@
     </style>
     <style name="txtRobotoromanextrabold75">
         <item name="android:textSize">@dimen/_75pxh</item>
-        <item name="android:textColor">@color/gray_800</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">800</item>
     </style>
     <style name="txtRobotoromanregular14">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoromanregular16">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -305,25 +273,21 @@
     </style>
     <style name="txtRobotoregular12_3">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoregular16_1">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_900_7c</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoregular16_2">
         <item name="android:textSize">@dimen/_16pxh</item>
-        <item name="android:textColor">@color/gray_800</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoromanregular14_2">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
@@ -332,25 +296,21 @@
     </style>
     <style name="txtRobotoregular12_1">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/red_A700_77</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoregular12_2">
         <item name="android:textSize">@dimen/_12pxh</item>
-        <item name="android:textColor">@color/red_A700_78</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoromanregular14_1">
         <item name="android:textSize">@dimen/_14pxh</item>
-        <item name="android:textColor">@color/teal_200</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">400</item>
     </style>
     <style name="txtRobotoromancondensedblack36">
         <item name="android:textSize">@dimen/_36pxh</item>
-        <item name="android:textColor">@color/black_900</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textFontWeight" tools:targetApi="p">900</item>
     </style>
