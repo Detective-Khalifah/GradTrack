@@ -12,7 +12,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintSignInScreen"
-        style="@style/groupStylewhite_A700"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -82,7 +81,7 @@
                 tools:src="@drawable/undraw_login" />
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_56pxv"
                 android:hint="@string/hint_e_mail"
@@ -103,7 +102,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_56pxv"
                 android:hint="@string/hint_password"
@@ -122,7 +121,7 @@
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnSignIn"
                 style="@style/btnSolidRounded"
                 android:layout_width="@dimen/_92pxh"

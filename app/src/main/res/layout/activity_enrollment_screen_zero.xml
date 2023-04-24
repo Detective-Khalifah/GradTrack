@@ -12,7 +12,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintEnrollmentScreen"
-        style="@style/groupStylewhite_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -46,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@id/imageGroupSix">
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="@dimen/_180pxh"
                 android:layout_height="@dimen/_56pxv"
                 android:layout_margin="@dimen/_8pxh"
@@ -66,10 +65,9 @@
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnEnroll"
-                style="@style/btnSolidRounded_1"
-                android:layout_width="@dimen/_85pxh"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="@dimen/_36pxh"
@@ -118,10 +116,10 @@
                 android:layout_marginEnd="@dimen/_31pxh"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <Button
                     android:id="@+id/btnSignUp"
                     style="@style/btnSolidRounded"
-                    android:layout_width="@dimen/_97pxh"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/_40pxv"
                     android:ellipsize="end"
                     android:gravity="center"
@@ -132,10 +130,10 @@
                     android:textAllCaps="false"
                     tools:text="@string/lbl_sign_up" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <Button
                     android:id="@+id/btnSignIn"
                     style="@style/btnSolidRounded"
-                    android:layout_width="@dimen/_92pxh"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/_40pxv"
                     android:layout_marginStart="@dimen/_104pxh"
                     android:ellipsize="end"

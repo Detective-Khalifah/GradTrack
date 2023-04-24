@@ -29,8 +29,6 @@
         <activity
             android:name="com.blogspot.thengnet.modules.forgotpasswordthree.ui.ForgotPasswordThreeActivity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.blogspot.thengnet.modules.signupscreenone.ui.SignUpScreenOneActivity" android:screenOrientation="portrait"/>
-        <activity
             android:name="com.blogspot.thengnet.modules.signupscreenfive.ui.SignUpScreenFiveActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.signupscreenseven.ui.SignUpScreenSevenActivity" android:screenOrientation="portrait"/>

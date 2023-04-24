@@ -9,7 +9,7 @@ import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenSevenBinding
 import com.blogspot.thengnet.modules.dashboardzero.ui.DashboardZeroActivity
 import com.blogspot.thengnet.modules.signupscreenseven.data.viewmodel.SignUpScreenSevenVM
-import com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity
+import com.blogspot.thengnet.modules.signupscreenzero.ui.SignUpScreenZeroActivity
 
 class SignUpScreenSevenActivity :
     BaseActivity<ActivitySignUpScreenSevenBinding>(R.layout.activity_sign_up_screen_seven) {
@@ -33,7 +33,7 @@ class SignUpScreenSevenActivity :
       startActivity(destIntent)
     }
     binding.btnPrevious.setOnClickListener {
-      val destIntent = SignUpScreenSixActivity.getIntent(this, null)
+      val destIntent = SignUpScreenZeroActivity.getIntent(this, null)
       startActivity(destIntent)
     }
   }

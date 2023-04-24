@@ -12,7 +12,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintOnboardingScreenOne"
-        style="@style/groupStylewhite_A700"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -95,10 +94,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnPrevious"
                 style="@style/btnSolidRounded"
-                android:layout_width="@dimen/_104pxh"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/_40pxv"
                 android:layout_marginBottom="@dimen/_8pxh"
                 android:ellipsize="end"
@@ -110,10 +109,10 @@
                 android:textAllCaps="false"
                 tools:text="@string/lbl_previous" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnNext"
                 style="@style/btnSolidRounded"
-                android:layout_width="@dimen/_78pxh"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/_40pxv"
                 android:layout_marginStart="@dimen/_104pxh"
                 android:layout_marginBottom="@dimen/_8pxh"

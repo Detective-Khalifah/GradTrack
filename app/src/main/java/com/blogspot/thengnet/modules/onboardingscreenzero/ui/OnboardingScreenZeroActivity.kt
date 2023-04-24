@@ -3,8 +3,6 @@ package com.blogspot.thengnet.modules.onboardingscreenzero.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
@@ -20,11 +18,11 @@ class OnboardingScreenZeroActivity :
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.onboardingScreenZeroVM = viewModel
-    Handler(Looper.getMainLooper()).postDelayed( {
-      val destIntent = OnboardingScreenOneActivity.getIntent(this, null)
-      startActivity(destIntent)
-      finish()
-      }, 3000)
+//    Handler(Looper.getMainLooper()).postDelayed( {
+//      val destIntent = OnboardingScreenOneActivity.getIntent(this, null)
+//      startActivity(destIntent)
+//      finish()
+//      }, 3000)
     }
 
     override fun setUpClicks(): Unit {

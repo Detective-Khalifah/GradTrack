@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivitySignUpScreenZeroBinding
-import com.blogspot.thengnet.modules.signupscreenone.ui.SignUpScreenOneActivity
+import com.blogspot.thengnet.modules.signupscreenseven.ui.SignUpScreenSevenActivity
 import com.blogspot.thengnet.modules.signupscreenzero.data.model.ListlabeltextRowModel
 import com.blogspot.thengnet.modules.signupscreenzero.data.viewmodel.SignUpScreenZeroVM
 
@@ -35,8 +35,8 @@ class SignUpScreenZeroActivity :
   }
 
   override fun setUpClicks(): Unit {
-    binding.btnNext.setOnClickListener {
-      val destIntent = SignUpScreenOneActivity.getIntent(this, null)
+    binding.btnSignUp.setOnClickListener {
+      val destIntent = SignUpScreenSevenActivity.getIntent(this, null)
       startActivity(destIntent)
     }
   }

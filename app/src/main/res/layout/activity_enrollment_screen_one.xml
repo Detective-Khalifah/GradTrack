@@ -12,7 +12,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintEnrollmentScreen"
-        style="@style/groupStylewhite_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal">
@@ -48,9 +47,8 @@
             app:layout_constraintTop_toBottomOf="@id/imageGroupSix"
             tools:text="@string/msg_you_re_enrolled" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnSignUp"
-            style="@style/btnSolidRounded_1"
             android:layout_width="@dimen/_97pxh"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
