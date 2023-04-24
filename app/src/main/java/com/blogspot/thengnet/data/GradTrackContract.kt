@@ -60,6 +60,7 @@ object GradTrackContract {
     object FacultyEntry : BaseColumns {
         const val TABLE_NAME = "faculties"
         const val COLUMN_ID = BaseColumns._ID
+        const val COLUMN_INSTITUTION_ID = "institution_id"
         const val COLUMN_NAME = "name"
         const val COLUMN_CREATED_BY = "created_by"
         const val COLUMN_UPDATED_BY = "updated_by"
@@ -72,6 +73,7 @@ object GradTrackContract {
         const val TABLE_NAME = "departments"
         const val COLUMN_ID = BaseColumns._ID
         const val COLUMN_NAME = "name"
+        const val COLUMN_INSTITUTION_ID = "institution_id"
         const val COLUMN_FACULTY_ID = "faculty_id"
         const val COLUMN_CREATED_BY = "created_by"
         const val COLUMN_UPDATED_BY = "updated_by"

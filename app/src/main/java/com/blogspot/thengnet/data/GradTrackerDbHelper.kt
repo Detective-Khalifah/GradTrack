@@ -4,6 +4,8 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class GradTrackerDbHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -72,7 +74,7 @@ class GradTrackerDbHelper(context: Context) :
             CREATE TABLE IF NOT EXISTS ${GradTrackContract.FacultyEntry.TABLE_NAME} (
                 ${GradTrackContract.FacultyEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT,
                 ${GradTrackContract.FacultyEntry.COLUMN_NAME} TEXT NOT NULL,
-                ${GradTrackContract.FacultyEntry.COLUMN_ID} INTEGER NOT NULL REFERENCES ${GradTrackContract.InstitutionEntry.TABLE_NAME}(${GradTrackContract.InstitutionEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE,
+                ${GradTrackContract.FacultyEntry.COLUMN_INSTITUTION_ID} INTEGER NOT NULL REFERENCES ${GradTrackContract.InstitutionEntry.TABLE_NAME}(${GradTrackContract.InstitutionEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE,
                 ${GradTrackContract.FacultyEntry.COLUMN_CREATED_AT} DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 ${GradTrackContract.FacultyEntry.COLUMN_CREATED_BY} INTEGER NOT NULL REFERENCES ${GradTrackContract.FacultyEntry.TABLE_NAME}(${GradTrackContract.FacultyEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE,
                 ${GradTrackContract.FacultyEntry.COLUMN_UPDATED_AT} DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -86,12 +88,13 @@ class GradTrackerDbHelper(context: Context) :
                 ${GradTrackContract.DepartmentEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT,
                 ${GradTrackContract.DepartmentEntry.COLUMN_NAME} TEXT NOT NULL,
                 ${GradTrackContract.DepartmentEntry.COLUMN_FACULTY_ID} INTEGER NOT NULL REFERENCES ${GradTrackContract.FacultyEntry.TABLE_NAME}(${GradTrackContract.FacultyEntry.COLUMN_ID}) ON DELETE CASCADE ON UPDATE CASCADE,
-                ${GradTrackContract.InstitutionEntry.COLUMN_ID} INTEGER NOT NULL REFERENCES ${GradTrackContract.InstitutionEntry.TABLE_NAME}(${GradTrackContract.InstitutionEntry.COLUMN_ID}) ON DELETE CASCADE ON UPDATE CASCADE,
+                ${GradTrackContract.DepartmentEntry.COLUMN_INSTITUTION_ID} INTEGER NOT NULL REFERENCES ${GradTrackContract.InstitutionEntry.TABLE_NAME}(${GradTrackContract.InstitutionEntry.COLUMN_ID}) ON DELETE CASCADE ON UPDATE CASCADE,
                 ${GradTrackContract.DepartmentEntry.COLUMN_CREATED_AT} DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 ${GradTrackContract.DepartmentEntry.COLUMN_CREATED_BY} INTEGER NOT NULL REFERENCES ${GradTrackContract.UserEntry.TABLE_NAME}(${GradTrackContract.UserEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE,
                 ${GradTrackContract.DepartmentEntry.COLUMN_UPDATED_AT} DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                ${GradTrackContract.DepartmentEntry.COLUMN_UPDATED_BY} INTEGER NOT NULL REFERENCES ${GradTrackContract.UserEntry.TABLE_NAME}(${GradTrackContract.UserEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE)
-            ;
+                ${GradTrackContract.DepartmentEntry.COLUMN_UPDATED_BY} INTEGER NOT NULL REFERENCES ${GradTrackContract.UserEntry.TABLE_NAME}(${GradTrackContract.UserEntry.COLUMN_ID}) ON DELETE RESTRICT ON UPDATE CASCADE,
+                UNIQUE(${GradTrackContract.DepartmentEntry.COLUMN_NAME}, ${GradTrackContract.DepartmentEntry.COLUMN_FACULTY_ID}, ${GradTrackContract.DepartmentEntry.COLUMN_INSTITUTION_ID})
+            );
         """
 
         // SQL statement to create the courses table
@@ -540,6 +543,217 @@ class GradTrackerDbHelper(context: Context) :
             "${GradTrackContract.CourseEntry.COLUMN_ID}=?",
             arrayOf(courseId.toString())
         ) > 0
+    }
+
+    /**
+     * This method adds a new faculty to the faculties table.
+     * This code creates a new ContentValues object, which holds the values that will be inserted
+     * into the database. The values are taken from the Faculty object passed to the method. The
+     * insert method is called on the database object to insert the values into the faculties table,
+     * and the ID of the new row is returned. Finally, the database is closed.
+     */
+    fun addFaculty(faculty: Faculty): Long {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put(GradTrackContract.FacultyEntry.COLUMN_NAME, faculty.name)
+            put(GradTrackContract.FacultyEntry.COLUMN_INSTITUTION_ID, faculty.institutionId)
+            put(GradTrackContract.FacultyEntry.COLUMN_CREATED_BY, faculty.createdBy)
+            put(GradTrackContract.FacultyEntry.COLUMN_UPDATED_BY, faculty.updatedBy)
+        }
+
+        val newRowId = db.insert(GradTrackContract.FacultyEntry.TABLE_NAME, null, values)
+        db.close()
+
+        return newRowId
+    }
+
+    /**
+     * This method retrieves a faculty from the faculties table based on its id.
+     * This method accepts an integer id as parameter, which represents the id of the faculty we
+     * want to retrieve. It then executes a SQL query that selects all the columns from the
+     * faculties table where the id column matches the given id. If a row is found with the given
+     * id, it creates a new Faculty object with the corresponding data and returns it. If no row is
+     * found, it returns null.
+     */
+    fun getFacultyById(id: Int): Faculty? {
+        val db = readableDatabase
+        val query = "SELECT * FROM faculties WHERE id = ?"
+        val cursor = db.rawQuery(query, arrayOf(id.toString()))
+
+        return if (cursor.moveToFirst()) {
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            val abbreviation = cursor.getString(cursor.getColumnIndexOrThrow("abbreviation"))
+            val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
+            val createdBy = cursor.getInt(cursor.getColumnIndexOrThrow("created_by"))
+            val updatedBy = cursor.getInt(cursor.getColumnIndexOrThrow("updated_by"))
+            val createdAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("created_at")))
+            val updatedAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("updated_at")))
+            Faculty(
+                id = id,
+                name = name,
+                abbreviation = abbreviation,
+                institutionId = institutionId,
+                createdBy = createdBy,
+                createdAt = createdAt,
+                updatedBy = updatedBy,
+                updatedAt = updatedAt
+            )
+        } else {
+            null
+        }
+    }
+
+    /**
+     * This method retrieves all faculties from the faculties table.
+     */
+    fun getAllFaculties(): List<Faculty> {
+        val faculties: MutableList<Faculty> = mutableListOf()
+
+        val selectQuery = "SELECT * FROM faculties"
+
+        val db = this.readableDatabase
+        val cursor = db.rawQuery(selectQuery, null)
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            val abbreviation = cursor.getString(cursor.getColumnIndexOrThrow("abbreviation"))
+            val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
+            val createdBy = cursor.getInt(cursor.getColumnIndexOrThrow("created_by"))
+            val updatedBy = cursor.getInt(cursor.getColumnIndexOrThrow("updated_by"))
+
+            val createdAtString = cursor.getString(cursor.getColumnIndexOrThrow("created_at"))
+            val createdAt = LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+
+            val updatedAtString = cursor.getString(cursor.getColumnIndexOrThrow("updated_at"))
+            val updatedAt = LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+
+            val faculty = Faculty(id, name, abbreviation, institutionId, createdAt, createdBy, updatedAt, updatedBy)
+            faculties.add(faculty)
+        }
+
+        cursor.close()
+        db.close()
+
+        return faculties
+    }
+
+    /**
+     * This method deletes a faculty from the faculties table based on its id.
+     * This method takes an integer id as a parameter, which represents the id of the faculty to be
+     * deleted. It opens a writable database connection, begins a transaction, and executes a SQL
+     * DELETE statement to remove the faculty from the faculties table where the id matches the
+     * given parameter. Finally, it ends the transaction and closes the database connection.
+     */
+    fun deleteFaculty(id: Int) {
+        val db = writableDatabase
+        db.beginTransaction()
+        try {
+            db.delete("faculties", "id=?", arrayOf(id.toString()))
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+        db.close()
+    }
+
+    /**
+     * This method adds a new department to the departments table.
+     */
+    fun addDepartment(department: Department): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues().apply {
+            put("name", department.name)
+            put("faculty_id", department.facultyId)
+            put("created_by", department.createdBy)
+            put("updated_by", department.updatedBy)
+        }
+        val result = db.insert("departments", null, contentValues)
+        return result != (-1).toLong()
+    }
+
+    /**
+     * This method retrieves a department from the departments table based on its id.
+     */
+    fun getDepartmentById(id: Int): Department? {
+        var department: Department? = null
+        val db = readableDatabase
+        val query = "SELECT * FROM departments WHERE id = ?"
+        val cursor = db.rawQuery(query, arrayOf(id.toString()))
+        if (cursor.moveToFirst()) {
+            val departmentId = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            val facultyId = cursor.getInt(cursor.getColumnIndexOrThrow("faculty_id"))
+            val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
+            val createdAtString = cursor.getString(cursor.getColumnIndexOrThrow("created_at"))
+            val createdAt = LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val createdBy = cursor.getInt(cursor.getColumnIndexOrThrow("created_by"))
+            val updatedAtString = cursor.getString(cursor.getColumnIndexOrThrow("updated_at"))
+            val updatedAt = LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val updatedBy = cursor.getInt(cursor.getColumnIndexOrThrow("updated_by"))
+            department = Department(departmentId, name, facultyId, institutionId, createdAt, createdBy, updatedAt, updatedBy)
+        }
+        cursor.close()
+        return department
+    }
+
+    /**
+     * This method retrieves all departments from the departments table.
+     * This method selects all the fields from the departments table except for created_by and
+     * updated_by, creates a Department object for each row fetched from the Cursor, and adds it to
+     * the departments list. Finally, the method closes the Cursor and returns the departments list.
+     */
+    fun getAllDepartments(): List<Department> {
+        val departments = mutableListOf<Department>()
+        val query = "SELECT id, name, faculty_id, institution_id, created_at, updated_at FROM departments"
+        val cursor = readableDatabase.rawQuery(query, null)
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            val facultyId = cursor.getInt(cursor.getColumnIndexOrThrow("faculty_id"))
+            val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
+            val createdAt = LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("created_at")))
+            val updatedAt = LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("updated_at")))
+            val department = Department(id, name, facultyId, institutionId, createdAt, 0, updatedAt, 0)
+            departments.add(department)
+        }
+        cursor.close()
+        return departments
+    }
+
+    /**
+     * This method updates a department in the departments table.
+     * This method takes in a Department object as its parameter, creates a ContentValues object
+     * and sets the values for the columns to be updated in the departments table. It then executes
+     * an UPDATE query with the update method of the SQLiteDatabase class and returns true if the
+     * query was successful, false otherwise. Finally, it closes the database connection.
+     */
+    fun updateDepartment(department: Department): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put("name", department.name)
+        contentValues.put("faculty_id", department.facultyId)
+        contentValues.put("institution_id", department.institutionId)
+        contentValues.put("updated_at", LocalDateTime.now().toString())
+        contentValues.put("updated_by", department.updatedBy)
+        contentValues.put("created_at", LocalDateTime.now().toString())
+        contentValues.put("created_by", department.createdBy)
+        val result = db.update("departments", contentValues, "id=?", arrayOf(department.id.toString()))
+        db.close()
+        return result != -1
+    }
+
+    /**
+     * This method deletes a department from the departments table based on its id.
+     * This method takes an integer id as its parameter, and uses it to delete the department with
+     * the matching id from the departments table in the database. The method returns true if the
+     * deletion is successful, and false otherwise.
+     */
+    fun deleteDepartment(id: Int): Boolean {
+        val db = this.writableDatabase
+        return db.delete("departments", "id = ?", arrayOf(id.toString())) > 0
     }
 
 

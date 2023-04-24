@@ -1,7 +1,7 @@
 package com.blogspot.thengnet.data
 
 import java.time.LocalDate
-import java.time.LocalTime
+import java.time.LocalDateTime
 
 data class Student(
     val id: Int = -1,
@@ -28,7 +28,7 @@ data class Student(
     val nextOfKinPhoneNumber: String? = "N/A",
     val nextOfKinRelationship: String? = "N/A",
     val createdBy: Int = -1,
-    val createdAt: LocalTime? = null,
+    val createdAt: LocalDateTime? = null,
     val updatedBy: Int = -1,
-    val updatedAt: LocalTime? = null,
+    val updatedAt: LocalDateTime? = null,
 )
