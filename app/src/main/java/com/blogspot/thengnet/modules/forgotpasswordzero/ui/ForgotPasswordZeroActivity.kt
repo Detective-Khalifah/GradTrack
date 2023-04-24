@@ -8,34 +8,32 @@ import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.base.BaseActivity
 import com.blogspot.thengnet.databinding.ActivityForgotPasswordZeroBinding
 import com.blogspot.thengnet.modules.forgotpasswordone.ui.ForgotPasswordOneActivity
-import com.blogspot.thengnet.modules.forgotpasswordzero.`data`.viewmodel.ForgotPasswordZeroVM
-import kotlin.String
-import kotlin.Unit
+import com.blogspot.thengnet.modules.forgotpasswordzero.data.viewmodel.ForgotPasswordZeroVM
 
 class ForgotPasswordZeroActivity :
     BaseActivity<ActivityForgotPasswordZeroBinding>(R.layout.activity_forgot_password_zero) {
-  private val viewModel: ForgotPasswordZeroVM by viewModels<ForgotPasswordZeroVM>()
+    private val viewModel: ForgotPasswordZeroVM by viewModels<ForgotPasswordZeroVM>()
 
-  override fun onInitialized(): Unit {
-    viewModel.navArguments = intent.extras?.getBundle("bundle")
-    binding.forgotPasswordZeroVM = viewModel
-  }
-
-  override fun setUpClicks(): Unit {
-    binding.linearButtongetotp.setOnClickListener {
-      val destIntent = ForgotPasswordOneActivity.getIntent(this, null)
-      startActivity(destIntent)
+    override fun onInitialized(): Unit {
+        viewModel.navArguments = intent.extras?.getBundle("bundle")
+        binding.forgotPasswordZeroVM = viewModel
     }
-  }
 
-  companion object {
-    const val TAG: String = "FORGOT_PASSWORD_ZERO_ACTIVITY"
-
-
-    fun getIntent(context: Context, bundle: Bundle?): Intent {
-      val destIntent = Intent(context, ForgotPasswordZeroActivity::class.java)
-      destIntent.putExtra("bundle", bundle)
-      return destIntent
+    override fun setUpClicks(): Unit {
+        binding.btnChangeOtp.setOnClickListener {
+            val destIntent = ForgotPasswordOneActivity.getIntent(this, null)
+            startActivity(destIntent)
+        }
     }
-  }
+
+    companion object {
+        const val TAG: String = "FORGOT_PASSWORD_ZERO_ACTIVITY"
+
+
+        fun getIntent(context: Context, bundle: Bundle?): Intent {
+            val destIntent = Intent(context, ForgotPasswordZeroActivity::class.java)
+            destIntent.putExtra("bundle", bundle)
+            return destIntent
+        }
+    }
 }
