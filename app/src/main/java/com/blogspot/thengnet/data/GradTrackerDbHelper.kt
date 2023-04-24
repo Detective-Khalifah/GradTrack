@@ -183,6 +183,126 @@ class GradTrackerDbHelper(context: Context) :
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
     /**
+     * This method adds a new role to the roles table.
+     * This method creates a new ContentValues object and sets the appropriate column values based
+     * on the Role object passed in. It then inserts the new role into the database using the insert
+     * method on the writable database object. Finally, it closes the database and returns the newly
+     * created role's id as an integer.
+     */
+    fun addRole(role: Role): Int {
+        val db = this.writableDatabase
+
+        val values = ContentValues().apply {
+            put(GradTrackContract.RoleEntry.COLUMN_NAME, role.name)
+            put(GradTrackContract.RoleEntry.COLUMN_CREATED_BY, role.createdBy)
+            put(GradTrackContract.RoleEntry.COLUMN_UPDATED_BY, role.updatedBy)
+        }
+
+        val roleId = db.insert(GradTrackContract.RoleEntry.TABLE_NAME, null, values)
+
+        db.close()
+
+        return roleId.toInt()
+    }
+
+    /**
+     * This method retrieves a role from the roles table based on its id.
+     */
+    fun getRoleById(id: Int): Role? {
+        val db = writableDatabase
+        val projection = arrayOf(
+            GradTrackContract.RoleEntry.COLUMN_ID,
+            GradTrackContract.RoleEntry.COLUMN_NAME,
+            GradTrackContract.RoleEntry.COLUMN_CREATED_AT,
+            GradTrackContract.RoleEntry.COLUMN_CREATED_BY,
+            GradTrackContract.RoleEntry.COLUMN_UPDATED_AT,
+            GradTrackContract.RoleEntry.COLUMN_UPDATED_BY
+        )
+
+        val selection = "${GradTrackContract.RoleEntry.COLUMN_ID} = ?"
+        val selectionArgs = arrayOf(id.toString())
+
+        val cursor = db.query(
+            GradTrackContract.RoleEntry.TABLE_NAME,
+            projection,
+            selection,
+            selectionArgs,
+            null,
+            null,
+            null
+        )
+
+        var role: Role? = null
+        if (cursor.moveToFirst()) {
+            val roleId =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_ID))
+            val name =
+                cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_NAME))
+            val createdAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_CREATED_AT)))
+            val createdBy =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_CREATED_BY))
+            val updatedAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_UPDATED_AT)))
+            val updatedBy =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_UPDATED_BY))
+
+            role = Role(roleId, name, createdAt, createdBy, updatedAt, updatedBy)
+        }
+
+        cursor.close()
+        db.close()
+
+        return role
+    }
+
+    /**
+     * This method retrieves all roles from the roles.
+     * This method creates an empty list of roles, opens a readable database, and executes a SQL
+     * query to retrieve all rows from the roles table. It then iterates over the cursor and
+     * retrieves the values for each role, creates a new Role object, and adds it to the list.
+     * Finally, it closes the cursor and the database, and returns the list of roles.
+     */
+    fun getAllRoles(): List<Role> {
+        val roles = mutableListOf<Role>()
+        val db = this.readableDatabase
+        val selectQuery = "SELECT * FROM ${GradTrackContract.RoleEntry.TABLE_NAME}"
+
+        val cursor = db.rawQuery(selectQuery, null)
+
+        while (cursor.moveToNext()) {
+            val id =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_ID))
+            val name =
+                cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_NAME))
+            val createdAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_CREATED_AT)))
+            val createdBy =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_CREATED_BY))
+            val updatedAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_UPDATED_AT)))
+            val updatedBy =
+                cursor.getInt(cursor.getColumnIndexOrThrow(GradTrackContract.RoleEntry.COLUMN_UPDATED_BY))
+
+            roles.add(
+                Role(
+                    id = id,
+                    name = name,
+                    createdAt = createdAt,
+                    createdBy = createdBy,
+                    updatedAt = updatedAt,
+                    updatedBy = updatedBy
+                )
+            )
+        }
+
+        cursor.close()
+        db.close()
+
+        return roles
+    }
+
+    /**
      * This method adds a new student to the students table.
      * This method takes a Student object as a parameter, creates a new ContentValues object to
      * store the values for each column, inserts the new row into the students table using the
@@ -625,12 +745,23 @@ class GradTrackerDbHelper(context: Context) :
             val updatedBy = cursor.getInt(cursor.getColumnIndexOrThrow("updated_by"))
 
             val createdAtString = cursor.getString(cursor.getColumnIndexOrThrow("created_at"))
-            val createdAt = LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val createdAt =
+                LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
 
             val updatedAtString = cursor.getString(cursor.getColumnIndexOrThrow("updated_at"))
-            val updatedAt = LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val updatedAt =
+                LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
 
-            val faculty = Faculty(id, name, abbreviation, institutionId, createdAt, createdBy, updatedAt, updatedBy)
+            val faculty = Faculty(
+                id,
+                name,
+                abbreviation,
+                institutionId,
+                createdAt,
+                createdBy,
+                updatedAt,
+                updatedBy
+            )
             faculties.add(faculty)
         }
 
@@ -688,12 +819,23 @@ class GradTrackerDbHelper(context: Context) :
             val facultyId = cursor.getInt(cursor.getColumnIndexOrThrow("faculty_id"))
             val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
             val createdAtString = cursor.getString(cursor.getColumnIndexOrThrow("created_at"))
-            val createdAt = LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val createdAt =
+                LocalDateTime.parse(createdAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
             val createdBy = cursor.getInt(cursor.getColumnIndexOrThrow("created_by"))
             val updatedAtString = cursor.getString(cursor.getColumnIndexOrThrow("updated_at"))
-            val updatedAt = LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            val updatedAt =
+                LocalDateTime.parse(updatedAtString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
             val updatedBy = cursor.getInt(cursor.getColumnIndexOrThrow("updated_by"))
-            department = Department(departmentId, name, facultyId, institutionId, createdAt, createdBy, updatedAt, updatedBy)
+            department = Department(
+                departmentId,
+                name,
+                facultyId,
+                institutionId,
+                createdAt,
+                createdBy,
+                updatedAt,
+                updatedBy
+            )
         }
         cursor.close()
         return department
@@ -707,16 +849,20 @@ class GradTrackerDbHelper(context: Context) :
      */
     fun getAllDepartments(): List<Department> {
         val departments = mutableListOf<Department>()
-        val query = "SELECT id, name, faculty_id, institution_id, created_at, updated_at FROM departments"
+        val query =
+            "SELECT id, name, faculty_id, institution_id, created_at, updated_at FROM departments"
         val cursor = readableDatabase.rawQuery(query, null)
         while (cursor.moveToNext()) {
             val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
             val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
             val facultyId = cursor.getInt(cursor.getColumnIndexOrThrow("faculty_id"))
             val institutionId = cursor.getInt(cursor.getColumnIndexOrThrow("institution_id"))
-            val createdAt = LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("created_at")))
-            val updatedAt = LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("updated_at")))
-            val department = Department(id, name, facultyId, institutionId, createdAt, 0, updatedAt, 0)
+            val createdAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("created_at")))
+            val updatedAt =
+                LocalDateTime.parse(cursor.getString(cursor.getColumnIndexOrThrow("updated_at")))
+            val department =
+                Department(id, name, facultyId, institutionId, createdAt, 0, updatedAt, 0)
             departments.add(department)
         }
         cursor.close()
@@ -740,7 +886,8 @@ class GradTrackerDbHelper(context: Context) :
         contentValues.put("updated_by", department.updatedBy)
         contentValues.put("created_at", LocalDateTime.now().toString())
         contentValues.put("created_by", department.createdBy)
-        val result = db.update("departments", contentValues, "id=?", arrayOf(department.id.toString()))
+        val result =
+            db.update("departments", contentValues, "id=?", arrayOf(department.id.toString()))
         db.close()
         return result != -1
     }
@@ -755,6 +902,5 @@ class GradTrackerDbHelper(context: Context) :
         val db = this.writableDatabase
         return db.delete("departments", "id = ?", arrayOf(id.toString())) > 0
     }
-
 
 }
