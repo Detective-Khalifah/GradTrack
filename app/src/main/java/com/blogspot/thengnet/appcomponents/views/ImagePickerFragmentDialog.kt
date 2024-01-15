@@ -11,13 +11,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.blogspot.thengnet.R
 import com.blogspot.thengnet.appcomponents.di.MyApp
 import com.blogspot.thengnet.databinding.LayoutImagePickerDialogBinding
 import com.blogspot.thengnet.extensions.PickerHandler
 import com.blogspot.thengnet.extensions.PickerHandler.OPEN_CAMERA_REQUEST_CODE
 import com.blogspot.thengnet.extensions.PickerHandler.OPEN_STORAGE_REQUEST_CODE
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
 
@@ -171,6 +171,7 @@ class ImagePickerFragmentDialog : BottomSheetDialogFragment(),
      * here we are handling results for the following request codes
      * [OPEN_CAMERA_REQUEST_CODE] and [OPEN_STORAGE_REQUEST_CODE]
      */
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(
         requestCode: Int,
         resultCode: Int,

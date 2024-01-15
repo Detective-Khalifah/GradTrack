@@ -13,7 +13,6 @@ def glideVersion = '4.11.0'
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.blogspot.thengnet"

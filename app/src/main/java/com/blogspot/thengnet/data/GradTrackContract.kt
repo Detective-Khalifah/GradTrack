@@ -107,7 +107,7 @@ object GradTrackContract {
         const val COLUMN_INSTITUTION_ID = "institution_id"
         const val COLUMN_FACULTY_ID = "faculty_id"
         const val COLUMN_DEPARTMENT_ID = "department_id"
-        const val COLUMN_CURRENT_LEVEL = "department_id"
+        const val COLUMN_CURRENT_LEVEL = "current_level"
         const val COLUMN_CREATED_BY = "created_by"
         const val COLUMN_UPDATED_BY = "updated_by"
         const val COLUMN_CREATED_AT = "created_at"
