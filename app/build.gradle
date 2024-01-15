@@ -91,6 +91,14 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'androidx.biometric:biometric:1.1.0'
     implementation 'com.vmadalin:easypermissions-ktx:0.1.0'
+
+    // Import the BoM for the Firebase platform
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    // Declare the dependency for the Cloud Firestore library
+    implementation("com.google.firebase:firebase-firestore")
+    // Add the dependency for the Firebase Authentication library
+    implementation("com.google.firebase:firebase-auth")
 }
 
 

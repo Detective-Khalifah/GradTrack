@@ -23,13 +23,9 @@
         <activity
             android:name="com.blogspot.thengnet.modules.onboardingscreentwo.ui.OnboardingScreenTwoActivity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.blogspot.thengnet.modules.signupscreensix.ui.SignUpScreenSixActivity" android:screenOrientation="portrait"/>
-        <activity
             android:name="com.blogspot.thengnet.modules.signupscreenzero.ui.SignUpScreenZeroActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.forgotpasswordthree.ui.ForgotPasswordThreeActivity" android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.blogspot.thengnet.modules.signupscreenfive.ui.SignUpScreenFiveActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.signupscreenseven.ui.SignUpScreenSevenActivity" android:screenOrientation="portrait"/>
         <activity
@@ -45,10 +41,6 @@
         <activity
             android:name="com.blogspot.thengnet.modules.dashboardone.ui.DashboardOneActivity" android:screenOrientation="portrait"/>
         <activity
-            android:name="com.blogspot.thengnet.modules.signupscreentwo.ui.SignUpScreenTwoActivity" android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.blogspot.thengnet.modules.signupscreenthree.ui.SignUpScreenThreeActivity" android:screenOrientation="portrait"/>
-        <activity
             android:name="com.blogspot.thengnet.modules.forgotpasswordtwo.ui.ForgotPasswordTwoActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.dashboardzero.ui.DashboardZeroActivity" android:screenOrientation="portrait"/>
@@ -58,8 +50,6 @@
             android:name="com.blogspot.thengnet.modules.profilezero.ui.ProfileZeroActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.signinscreenzero.ui.SignInScreenZeroActivity" android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.blogspot.thengnet.modules.signupscreenfour.ui.SignUpScreenFourActivity" android:screenOrientation="portrait"/>
         <activity
             android:name="com.blogspot.thengnet.modules.forgotpasswordzero.ui.ForgotPasswordZeroActivity" android:screenOrientation="portrait"/>
     </application>

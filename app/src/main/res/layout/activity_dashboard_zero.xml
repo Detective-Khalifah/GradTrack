@@ -98,99 +98,6 @@
                     android:text="@{dashboardZeroVM.dashboardZeroModel.txtCurrentSemeste}"
                     style="@style/txtRobotoromanregular14_1" tools:text="@string/msg_current_semeste"/>
             </LinearLayout>
-            <LinearLayout android:id="@+id/linearEnrolledCourse"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_39pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtTextenrolledc"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.58"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{dashboardZeroVM.dashboardZeroModel.txtTextenrolledc}"
-                    style="@style/txtRobotoromansemibold16" tools:text="@string/msg_enrolled_course"/>
-                <LinearLayout android:id="@+id/linearRowviewdetailsOne"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2pxv"
-                    android:layout_marginEnd="@dimen/_2pxh"
-                    android:layout_marginStart="@dimen/_138pxh"
-                    android:layout_weight="0.42"
-                    android:layout_width="0dp" android:orientation="horizontal">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtViewDetailsOne"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.93"
-                        android:layout_width="0dp"
-                        android:singleLine="true"
-                        android:text="@{dashboardZeroVM.dashboardZeroModel.txtViewDetailsOne}"
-                        style="@style/txtRobotoromanregular14_1" tools:text="@string/lbl_view_details"/>
-                    <ImageView android:id="@+id/imageVectorOne"
-                        android:layout_height="@dimen/_9pxh"
-                        android:layout_marginBottom="@dimen/_3pxv"
-                        android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_marginTop="@dimen/_3pxv"
-                        android:layout_width="@dimen/_5pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/img_vector_teal_200"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_teal_200"/>
-                </LinearLayout>
-            </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:gravity="end"
-                android:id="@+id/recyclerCoursesCards"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4pxv"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_8pxh}" tools:itemCount="4" tools:listitem="@layout/row_coursescards"/>
-            <LinearLayout android:id="@+id/linearFailedCourses"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_7pxh"
-                android:layout_marginTop="@dimen/_20pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtTextfailedcou"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.54"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{dashboardZeroVM.dashboardZeroModel.txtTextfailedcou}"
-                    style="@style/txtRobotoromansemibold16" tools:text="@string/lbl_failed_courses"/>
-                <LinearLayout android:id="@+id/linearRowviewdetailsTwo"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2pxv"
-                    android:layout_marginEnd="@dimen/_10pxh"
-                    android:layout_marginStart="@dimen/_138pxh"
-                    android:layout_weight="0.46"
-                    android:layout_width="0dp" android:orientation="horizontal">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtViewDetailsTwo"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.93"
-                        android:layout_width="0dp"
-                        android:singleLine="true"
-                        android:text="@{dashboardZeroVM.dashboardZeroModel.txtViewDetailsTwo}"
-                        style="@style/txtRobotoromanregular14_1" tools:text="@string/lbl_view_details"/>
-                    <ImageView android:id="@+id/imageVectorTwo"
-                        android:layout_height="@dimen/_9pxh"
-                        android:layout_marginBottom="@dimen/_3pxv"
-                        android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_marginTop="@dimen/_3pxv"
-                        android:layout_width="@dimen/_5pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/img_vector_teal_200"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_teal_200"/>
-                </LinearLayout>
-            </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:gravity="start"
-                android:id="@+id/recyclerListinitial"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_4pxh}" tools:itemCount="4" tools:listitem="@layout/row_listinitial"/>
         </LinearLayout>
         <FrameLayout android:gravity="start"
             android:id="@+id/frameBottombar"
@@ -239,7 +146,8 @@
                         android:layout_width="0dp" android:orientation="vertical">
                         <FrameLayout android:id="@+id/frameIcon"
                             android:layout_height="@dimen/_27pxv"
-                            android:layout_width="@dimen/_55pxh" style="@style/groupStylegreen_3">
+                            android:layout_width="@dimen/_55pxh" style="@style/groupStylegreen_3"
+                            android:layout_gravity="center">
                             <ImageView
                                 android:id="@+id/imageVectorThree"
                                 android:layout_gravity="center"
