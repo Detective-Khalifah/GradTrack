@@ -177,6 +177,7 @@
                         style="@style/txtRobotoregular12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:completionThreshold="0"
                         android:inputType="text|textCapCharacters"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="@dimen/_3pxh"

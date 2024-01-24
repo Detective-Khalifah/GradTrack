@@ -35,12 +35,12 @@ class StateAdapter(
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val state = getItem(position)
         val view = convertView ?: LayoutInflater.from(context)
             .inflate(R.layout.state_item, parent, false)
 
         // Bind data to UI components
         val stateText: TextView = view.findViewById(R.id.state_text)
+        val state = getItem(position)
         stateText.text = state.name
         Log.d(LOG_TAG, "getView at $position: $state")
         return view
@@ -48,6 +48,7 @@ class StateAdapter(
 
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+        return getView(position, convertView, parent)
         val state = getItem(position)
         val view = convertView ?: LayoutInflater.from(context)
             .inflate(R.layout.state_item, parent, false)
@@ -67,13 +68,9 @@ class StateAdapter(
              * @return FilterResults object that contains the filtered data.
              */
             override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val filteredResults = if (constraint.isNullOrEmpty()) {
-                    stateList
-                } else {
-                    stateList.filter { state ->
-                        Log.v(LOG_TAG, "filter: $state")
-                        state.name.contains(constraint, true)
-                    }
+                val filteredResults = stateList.filter { state ->
+                    Log.v(LOG_TAG, "filter: $state")
+                    state.name.contains(constraint ?: "", true)
                 }
 
                 val results = FilterResults()
