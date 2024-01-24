@@ -50,8 +50,7 @@ class SignUpScreenZeroActivity :
         val stateList: List<State> = Gson().fromJson(json, States::class.java).states
         Log.v(LOG_TAG, "stateList: $stateList")
 
-        val stateAdapter = StateAdapter(this, R.layout.state_item, stateList)
-//        val stateAdapter = StatesAdapter(stateList) { selectedState -> }
+        val stateAdapter = StateAdapter(this, R.layout.state_item, stateList) {selectedState ->}
         stateOfOriginMenu.setAdapter(stateAdapter)
         stateAdapter.notifyDataSetChanged()
     }

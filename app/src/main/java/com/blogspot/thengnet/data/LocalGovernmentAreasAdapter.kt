@@ -1,8 +1,11 @@
 package com.blogspot.thengnet.data
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.blogspot.thengnet.R
 
 class LocalGovernmentAreasAdapter(
     private val lgas: List<LocalGovernmentArea>,
@@ -11,12 +14,14 @@ class LocalGovernmentAreasAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LocalGovernmentAreaViewHolder {
         // Implement onCreateViewHolder
-        return TODO("Provide the return value")
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.lga_item, parent, false)
+        return LocalGovernmentAreaViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LocalGovernmentAreaViewHolder, position: Int) {
         val lga = lgas[position]
         holder.bind(lga)
+        holder.nameTextView.text = lga.name
         holder.itemView.setOnClickListener { onLGASelected(lga) }
     }
 
@@ -24,6 +29,7 @@ class LocalGovernmentAreasAdapter(
 
     class LocalGovernmentAreaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Implement ViewHolder
+        val nameTextView: TextView = itemView.findViewById(R.id.lga_text)
         fun bind(lga: LocalGovernmentArea) {
             // Bind data to UI components
         }
