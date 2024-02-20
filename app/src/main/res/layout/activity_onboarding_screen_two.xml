@@ -10,37 +10,43 @@
             type="com.blogspot.thengnet.modules.onboardingscreentwo.data.viewmodel.OnboardingScreenTwoVM" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/linearOnboardingScreenTwo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal">
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageImageprocessin"
             imageRes="@{@drawable/privacy_policy_rafiki}"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_271pxv"
             android:gravity="start"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
             tools:ignore="ContentDescription"
             tools:src="@drawable/privacy_policy_rafiki" />
+
+        <TextView
+            android:id="@+id/txt_onboarding_two"
+            style="@style/txtRobotoromanregular16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:text="@string/onboarding_text_two" />
 
         <LinearLayout
             android:id="@+id/linearOnboardingProg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_43pxh"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_33pxv"
-            android:layout_marginEnd="@dimen/_43pxh"
             android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageImageprocessin">
+            android:orientation="horizontal">
 
             <View
                 android:id="@+id/viewIcon"
@@ -82,34 +88,14 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_onboarding_two"
-            style="@style/txtRobotoromanregular16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_22pxv"
-            android:ellipsize="end"
-            android:gravity="center_horizontal"
-            android:letterSpacing="0.02"
-            android:lineSpacingExtra="@dimen/_3pxh"
-            android:text="@string/onboarding_text_two"
-            app:layout_constraintBottom_toTopOf="@id/linearPrevNextButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg" />
-
         <LinearLayout
             android:id="@+id/linearPrevNextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_43pxh"
-            android:layout_marginTop="@dimen/_81pxv"
+            android:layout_marginTop="@dimen/_24pxv"
             android:layout_marginEnd="@dimen/_43pxh"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnPrevious"
@@ -143,6 +129,6 @@
                 tools:text="@string/lbl_enroll" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </layout>
