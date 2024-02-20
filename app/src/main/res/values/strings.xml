@@ -26,6 +26,8 @@
     <string name="hint_nationality">Nationality</string>
     <string name="hint_state_of_origin">State of Origin</string>
     <string name="hint_local_government_of_origin">Local Government of Origin</string>
+    <string name="hint_state_of_residence">State of Residence</string>
+    <string name="hint_local_government_of_residence">Local Government of Residence</string>
     <string name="hint_hometown">Hometown</string>
 
     <!-- Sign Up Form 2 -->
@@ -183,4 +185,7 @@ Morbi in in facilisis adipiscing pulvinar et placerat. Cras.</string>
     <string name="msg_camera_storage_permission">This Application need permission\n1.Camera permission to capture the image.\n2.Storage Access permission to save the captured image.</string>
     <string name="lbl_camera">Camera</string>
     <string name="lbl_gallery">Gallery</string>
+    <string name="onboarding_text_zero">Welcome to GradTrack, your academic companion. Explore, connect, and achieve your educational goals with ease.</string>
+    <string name="onboarding_text_one">Discover a range of features tailored to enhance your academic journey. From course planning to connecting with peers, we\'ve got you covered.</string>
+    <string name="onboarding_text_two">Ready to embark on your academic adventure? Sign up now and unlock a world of possibilities. Let\'s get started!</string>
 </resources>

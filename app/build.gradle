@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    // Google services Gradle plugin
+    id 'com.google.gms.google-services'
 }
 
 def koin_version = "2.1.6"
@@ -15,7 +17,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.blogspot.thengnet"
+        applicationId "com.blogspot.thengnet.gradtrack"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
@@ -95,10 +97,15 @@ dependencies {
     // Import the BoM for the Firebase platform
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-    // Declare the dependency for the Cloud Firestore library
+    // Dependency for the Cloud Firestore library
     implementation("com.google.firebase:firebase-firestore")
-    // Add the dependency for the Firebase Authentication library
+    // Dependency for the Firebase Authentication library
     implementation("com.google.firebase:firebase-auth")
+    // Dependency for Firebase Analytics library
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
 
     implementation 'com.google.code.gson:gson:2.10'
 }

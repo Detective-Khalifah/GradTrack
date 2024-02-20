@@ -18,17 +18,16 @@
 
         <ImageView
             android:id="@+id/imageImageprocessin"
-            imageRes="@{@drawable/img_imageprocessin_1}"
+            imageRes="@{@drawable/privacy_policy_rafiki}"
             android:layout_width="0dp"
             android:layout_height="@dimen/_271pxv"
             android:gravity="start"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/img_imageprocessin_1" />
+            tools:src="@drawable/privacy_policy_rafiki" />
 
         <LinearLayout
             android:id="@+id/linearOnboardingProg"
@@ -83,6 +82,22 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/txt_onboarding_two"
+            style="@style/txtRobotoromanregular16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:text="@string/onboarding_text_two"
+            app:layout_constraintBottom_toTopOf="@id/linearPrevNextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg" />
+
         <LinearLayout
             android:id="@+id/linearPrevNextButton"
             android:layout_width="match_parent"
@@ -91,6 +106,7 @@
             android:layout_marginTop="@dimen/_81pxv"
             android:layout_marginEnd="@dimen/_43pxh"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearOnboardingProg">
@@ -126,5 +142,7 @@
                 android:textAllCaps="false"
                 tools:text="@string/lbl_enroll" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
